@@ -1,10 +1,9 @@
-
 name: Notion Sync
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "7,22,37,52 * * * *"
 
 permissions:
   contents: write
@@ -21,239 +20,80 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Fetch and transform Notion data
+      - uses: actions/checkout@v4
+      - name: Fetch Notion and build sales.json
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
         run: |
           python3 - <<'PY'
-          import os
-          import re
-          import json
-          import urllib.request
+          import os, re, json, urllib.request
           from datetime import datetime, timezone
-
-          source = "4126fd5d-7856-80f6-ac0d-000ba4d30431"
-          url = f"https://api.notion.com/v1/data_sources/{source}/query"
-
-          headers = {
-              "Authorization": "Bearer " + os.environ["NOTION_TOKEN"],
-              "Notion-Version": "2025-09-03",
-              "Content-Type": "application/json"
-          }
-
-          rows = []
-          cursor = None
-
+          source='4126fd5d-7856-80f6-ac0d-000ba4d30431'
+          url=f'https://api.notion.com/v1/data_sources/{source}/query'
+          headers={'Authorization':'Bearer '+os.environ['NOTION_TOKEN'],'Notion-Version':'2025-09-03','Content-Type':'application/json'}
+          rows=[]; cursor=None
           while True:
-              body = {"page_size": 100}
-              if cursor:
-                  body["start_cursor"] = cursor
-
-              request = urllib.request.Request(
-                  url,
-                  data=json.dumps(body).encode(),
-                  headers=headers,
-                  method="POST"
-              )
-
-              with urllib.request.urlopen(request) as response:
-                  result = json.load(response)
-
-              rows.extend(result["results"])
-
-              if not result.get("has_more"):
-                  break
-
-              cursor = result["next_cursor"]
-
-          def rich_text(prop, key="rich_text"):
-              return "".join(
-                  part.get("plain_text", "")
-                  for part in prop.get(key, [])
-              )
-
-          def sales_date(value):
-              matches = re.findall(
-                  r"(?<!\d)(\d{1,2}\.\d{1,2}\.\d{2,4})(?!\d)",
-                  value
-              )
-
-              dates = []
+              body={'page_size':100}
+              if cursor: body['start_cursor']=cursor
+              request=urllib.request.Request(url,data=json.dumps(body).encode(),headers=headers,method='POST')
+              with urllib.request.urlopen(request,timeout=45) as response: result=json.load(response)
+              rows.extend(result['results'])
+              if not result.get('has_more'): break
+              cursor=result['next_cursor']
+          def txt(prop,key='rich_text'):
+              return ''.join(part.get('plain_text','') for part in prop.get(key,[]))
+          def legacy_date(value):
+              matches=re.findall(r'(?<!\d)(\d{1,2}\.\d{1,2}\.\d{2,4})(?!\d)',value)
+              dates=[]
               for match in matches:
                   try:
-                      fmt = (
-                          "%d.%m.%y"
-                          if len(match.split(".")[-1]) == 2
-                          else "%d.%m.%Y"
-                      )
-                      dates.append(
-                          datetime.strptime(
-                              match, fmt
-                          ).date().isoformat()
-                      )
-                  except ValueError:
-                      pass
-
-              return (
-                  dates[0]
-                  if len(set(dates)) == 1
-                  else None
-              )
-
-          def number(value):
-              return value if value is not None else 0
-
-          items = []
-
+                      fmt='%d.%m.%y' if len(match.split('.')[-1])==2 else '%d.%m.%Y'
+                      dates.append(datetime.strptime(match,fmt).date().isoformat())
+                  except ValueError: pass
+              return dates[0] if len(set(dates))==1 else None
+          items=[]
           for row in rows:
-              p = row["properties"]
-
-              status = (
-                  p["Status"].get("status") or {}
-              ).get("name", "")
-
-              owners = [
-                  owner["name"]
-                  for owner in p["Owner"].get("multi_select", [])
-              ]
-
-              owners = [
-                  {
-                      "Mama": "Ulrike",
-                      "Papa": "Diethelm"
-                  }.get(owner, owner)
-                  for owner in owners
-              ]
-
-              name = rich_text(p["Item"], "title")
-              profit = p["Sales Profit"].get("number")
-              minimum = p["Minimum"].get("number")
-              best = p["Best Case"].get("number")
-
-              date = sales_date(
-                  rich_text(p["Sales Update"])
-              )
-
-              items.append({
-                  "id": row["id"],
-                  "name": name,
-                  "status": status,
-                  "owners": owners,
-                  "profit": profit,
-                  "minimum": minimum,
-                  "bestCase": best,
-                  "soldDate": (
-                      date if status == "Sold" else None
-                  )
-              })
-
-          sold = [
-              x for x in items
-              if x["status"] == "Sold"
-          ]
-
-          unsold = [
-              x for x in items
-              if x["status"] != "Sold"
-          ]
-
-          revenue = sum(
-              number(x["profit"]) for x in sold
-          )
-
-          minimum_total = revenue + sum(
-              number(x["minimum"]) for x in unsold
-          )
-
-          best_total = revenue + sum(
-              number(x["bestCase"]) for x in unsold
-          )
-
-          if any(x["profit"] is None for x in sold):
-              raise ValueError("Sold item missing profit")
-
-          if any(not x["owners"] for x in items):
-              raise ValueError("Item missing owner")
-
-          if any(
-              x["minimum"] is not None
-              and x["bestCase"] is not None
-              and x["minimum"] > x["bestCase"]
-              for x in unsold
-          ):
-              raise ValueError("Minimum exceeds Best Case")
-
-          missing = [
-              x for x in unsold
-              if x["minimum"] is None
-              or x["bestCase"] is None
-          ]
-
-          payload = {
-              "updatedAt": datetime.now(
-                  timezone.utc
-              ).isoformat(),
-              "recordCount": len(items),
-              "soldCount": len(sold),
-              "revenue": round(revenue, 2),
-              "minimumTotal": round(minimum_total, 2),
-              "bestCaseTotal": round(best_total, 2),
-              "missingEstimateCount": len(missing),
-              "items": items
-          }
-
-          os.makedirs("data", exist_ok=True)
-
-          with open(
-              "data/sales.json",
-              "w",
-              encoding="utf-8"
-          ) as f:
-              json.dump(
-                  payload,
-                  f,
-                  ensure_ascii=False,
-                  indent=2
-              )
-
-          print("NOTION SYNC REPORT")
-          print("Total records:", len(items))
-          print("Sold:", len(sold))
-          print("Revenue:", round(revenue, 2))
-          print("Minimum:", round(minimum_total, 2))
-          print("Best Case:", round(best_total, 2))
-          print("Missing estimates:", len(missing))
-          print("sales.json generated successfully")
+              p=row['properties']
+              status=(p['Status'].get('status') or {}).get('name','')
+              owners=[{'Mama':'Ulrike','Papa':'Diethelm'}.get(x['name'],x['name']) for x in p['Owner'].get('multi_select',[])]
+              dateprop=p.get('Sales Date',{})
+              if dateprop and dateprop.get('type')!='date':
+                  raise ValueError('Sales Date must have Notion Date property type')
+              direct=(dateprop.get('date') or {}).get('start') if dateprop else None
+              if direct:
+                  try: direct=datetime.fromisoformat(direct.replace('Z','+00:00')).date().isoformat()
+                  except ValueError: raise ValueError('Invalid Sales Date')
+              date=direct or legacy_date(txt(p['Sales Update']))
+              items.append({'id':row['id'],'name':txt(p['Item'],'title'),'status':status,'owners':owners,'profit':p['Sales Profit'].get('number'),'minimum':p['Minimum'].get('number'),'bestCase':p['Best Case'].get('number'),'soldDate':date if status=='Sold' else None})
+          sold=[x for x in items if x['status']=='Sold']
+          unsold=[x for x in items if x['status']!='Sold']
+          if any(x['profit'] is None for x in sold): raise ValueError('Sold item missing Sales Profit')
+          if any(not x['owners'] for x in items): raise ValueError('Item missing Owner')
+          if any(x['minimum'] is not None and x['bestCase'] is not None and x['minimum']>x['bestCase'] for x in unsold): raise ValueError('Minimum exceeds Best Case')
+          def num(v): return v if v is not None else 0
+          revenue=sum(num(x['profit']) for x in sold)
+          minimum=revenue+sum(num(x['minimum']) for x in unsold)
+          best=revenue+sum(num(x['bestCase']) for x in unsold)
+          payload={'updatedAt':datetime.now(timezone.utc).isoformat(),'recordCount':len(items),'soldCount':len(sold),'revenue':round(revenue,2),'minimumTotal':round(minimum,2),'bestCaseTotal':round(best,2),'missingEstimateCount':sum(x['minimum'] is None or x['bestCase'] is None for x in unsold),'items':items}
+          os.makedirs('data',exist_ok=True)
+          with open('data/sales.json','w',encoding='utf-8') as f: json.dump(payload,f,ensure_ascii=False,indent=2)
+          print('Records:',len(items),'Sold:',len(sold),'Revenue:',round(revenue,2),'Sold without date:',sum(x['soldDate'] is None for x in sold))
           PY
-
-      - name: Commit updated data
+      - name: Commit data to repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add data/sales.json
-
           if ! git diff --cached --quiet; then
             git commit -m "Update live sales data"
             git pull --rebase origin main
             git push origin HEAD:main
-          else
-            echo "No changes to commit"
           fi
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload website
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: .
-
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
