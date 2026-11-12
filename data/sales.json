@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-12T18:26:04.370620+00:00",
+  "updatedAt": "2026-11-12T19:09:39.792102+00:00",
   "recordCount": 102,
-  "soldCount": 6,
-  "revenue": 322.81,
-  "minimumTotal": 4070.81,
+  "soldCount": 7,
+  "revenue": 522.81,
+  "minimumTotal": 4190.8099999999995,
   "bestCaseTotal": 8762.81,
   "missingEstimateCount": 2,
   "items": [
@@ -383,14 +383,14 @@
     {
       "id": "4136fd5d-7856-80f3-aeab-e4045fdfce0f",
       "name": "Pokémonkarte - Glurak",
-      "status": "Online for Sale",
+      "status": "Sold",
       "owners": [
         "Philipp"
       ],
-      "profit": null,
+      "profit": 200,
       "minimum": 80,
       "bestCase": 200,
-      "soldDate": null
+      "soldDate": "2026-11-12"
     },
     {
       "id": "4136fd5d-7856-80af-af5a-f6c555a473bf",
