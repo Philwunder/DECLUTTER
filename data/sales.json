@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-12T21:32:42.639257+00:00",
+  "updatedAt": "2026-11-12T22:19:06.979201+00:00",
   "recordCount": 102,
-  "soldCount": 6,
-  "revenue": 322.81,
-  "minimumTotal": 4070.81,
+  "soldCount": 7,
+  "revenue": 337.81,
+  "minimumTotal": 4080.81,
   "bestCaseTotal": 8762.81,
   "missingEstimateCount": 0,
   "items": [
@@ -407,14 +407,14 @@
     {
       "id": "4136fd5d-7856-8090-9dd2-c8c0a803f32b",
       "name": "HDMI Kabel, 10m",
-      "status": "Online for Sale",
+      "status": "Sold",
       "owners": [
         "Philipp"
       ],
       "profit": 15,
       "minimum": 5,
       "bestCase": 15,
-      "soldDate": null
+      "soldDate": "2026-11-12"
     },
     {
       "id": "4126fd5d-7856-8068-aa72-f3cb00b31c92",
@@ -1008,7 +1008,7 @@
     },
     {
       "id": "4126fd5d-7856-8093-b20c-d83fd87b24c0",
-      "name": "Stuhl, High Heel, Pink",
+      "name": "Stuhl - High Heel, Pink",
       "status": "Sold",
       "owners": [
         "Eva"
@@ -1020,7 +1020,7 @@
     },
     {
       "id": "4126fd5d-7856-8072-b856-d5a99edfa581",
-      "name": "Stuhl, Stokke Move, Blau",
+      "name": "Stuhl - Stokke Move, Blau",
       "status": "Online for Sale",
       "owners": [
         "Family"
@@ -1056,7 +1056,7 @@
     },
     {
       "id": "4126fd5d-7856-8014-8ef0-e0659e2cee66",
-      "name": "Glasttisch",
+      "name": "Glastisch",
       "status": "Online for Sale",
       "owners": [
         "Family"
