@@ -16,8 +16,10 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Fetch and transform Notion data
         env:
@@ -42,8 +44,10 @@ jobs:
           rows = []
           cursor = None
 
+          # Fetch all Notion records
           while True:
               body = {"page_size": 100}
+
               if cursor:
                   body["start_cursor"] = cursor
 
@@ -61,8 +65,10 @@ jobs:
 
               if not result.get("has_more"):
                   break
+
               cursor = result["next_cursor"]
 
+          # Helper functions
           def rich_text(prop, key="rich_text"):
               return "".join(
                   part.get("plain_text", "")
@@ -74,35 +80,68 @@ jobs:
                   r"(?<!\d)(\d{1,2}\.\d{1,2}\.\d{2,4})(?!\d)",
                   value
               )
+
               dates = []
+
               for match in matches:
                   try:
-                      fmt = "%d.%m.%y" if len(match.split(".")[-1]) == 2 else "%d.%m.%Y"
-                      dates.append(datetime.strptime(match, fmt).date().isoformat())
+                      fmt = (
+                          "%d.%m.%y"
+                          if len(match.split(".")[-1]) == 2
+                          else "%d.%m.%Y"
+                      )
+
+                      parsed = datetime.strptime(
+                          match, fmt
+                      ).date().isoformat()
+
+                      dates.append(parsed)
+
                   except ValueError:
                       pass
-              return dates[0] if len(set(dates)) == 1 else None
 
+              return (
+                  dates[0]
+                  if len(set(dates)) == 1
+                  else None
+              )
+
+          def number(value):
+              return value if value is not None else 0
+
+          # Transform Notion records
           items = []
 
           for row in rows:
               p = row["properties"]
-              status = (p["Status"].get("status") or {}).get("name", "")
+
+              status = (
+                  p["Status"].get("status") or {}
+              ).get("name", "")
+
               owners = [
-                  x["name"] for x in
-                  p["Owner"].get("multi_select", [])
+                  owner["name"]
+                  for owner in p["Owner"].get("multi_select", [])
               ]
+
+              # Display names
               owners = [
-                  {"Mama": "Ulrike", "Papa": "Diethelm"}.get(x, x)
-                  for x in owners
+                  {
+                      "Mama": "Ulrike",
+                      "Papa": "Diethelm"
+                  }.get(owner, owner)
+                  for owner in owners
               ]
 
               name = rich_text(p["Item"], "title")
+
               profit = p["Sales Profit"].get("number")
               minimum = p["Minimum"].get("number")
               best = p["Best Case"].get("number")
 
-              date = sales_date(rich_text(p["Sales Update"]))
+              date = sales_date(
+                  rich_text(p["Sales Update"])
+              )
 
               items.append({
                   "id": row["id"],
@@ -112,63 +151,130 @@ jobs:
                   "profit": profit,
                   "minimum": minimum,
                   "bestCase": best,
-                  "soldDate": date if status == "Sold" else None
+                  "soldDate": (
+                      date if status == "Sold" else None
+                  )
               })
 
-          sold = [x for x in items if x["status"] == "Sold"]
-          unsold = [x for x in items if x["status"] != "Sold"]
+          # Separate sold and unsold items
+          sold = [
+              item for item in items
+              if item["status"] == "Sold"
+          ]
 
-          def number(value):
-              return value if value is not None else 0
+          unsold = [
+              item for item in items
+              if item["status"] != "Sold"
+          ]
 
-          revenue = sum(number(x["profit"]) for x in sold)
-          minimum = revenue + sum(number(x["minimum"]) for x in unsold)
-          best = revenue + sum(number(x["bestCase"]) for x in unsold)
+          # Calculate financial totals
+          revenue = sum(
+              number(item["profit"])
+              for item in sold
+          )
 
-          if any(x["profit"] is None for x in sold):
-              raise ValueError("Sold item missing Sales Profit")
+          minimum_total = revenue + sum(
+              number(item["minimum"])
+              for item in unsold
+          )
 
-          if any(not x["owners"] for x in items):
-              raise ValueError("Item missing Owner")
+          best_total = revenue + sum(
+              number(item["bestCase"])
+              for item in unsold
+          )
+
+          # Validate critical data
+          if any(item["profit"] is None for item in sold):
+              raise ValueError(
+                  "Sold item missing Sales Profit"
+              )
+
+          if any(not item["owners"] for item in items):
+              raise ValueError(
+                  "Item missing Owner"
+              )
 
           if any(
-              x["minimum"] is None or x["bestCase"] is None
-              for x in unsold
+              item["minimum"] is not None
+              and item["bestCase"] is not None
+              and item["minimum"] > item["bestCase"]
+              for item in unsold
           ):
-              raise ValueError("Unsold item missing price estimate")
-
-          if any(
-              x["minimum"] > x["bestCase"]
-              for x in unsold
-          ):
-              raise ValueError("Minimum exceeds Best Case")
+              raise ValueError(
+                  "Minimum exceeds Best Case"
+              )
 
           if len(items) != len(rows):
-              raise ValueError("Record count mismatch")
+              raise ValueError(
+                  "Record count mismatch"
+              )
 
+          # Report missing price estimates
+          missing = [
+              item for item in unsold
+              if item["minimum"] is None
+              or item["bestCase"] is None
+          ]
+
+          print("=" * 50)
+          print("NOTION SYNC REPORT")
+          print("=" * 50)
+
+          print("Total records:", len(items))
+          print("Sold:", len(sold))
+          print("Unsold:", len(unsold))
+          print("Revenue:", revenue)
+          print("Minimum total:", minimum_total)
+          print("Best Case total:", best_total)
+
+          print(
+              "Items with missing estimates:",
+              len(missing)
+          )
+
+          for item in missing:
+              print("Missing estimate:", item["name"])
+
+          print(
+              "Sold without date:",
+              sum(
+                  item["soldDate"] is None
+                  for item in sold
+              )
+          )
+
+          # Prepare public dashboard data
           payload = {
-              "updatedAt": datetime.now(timezone.utc).isoformat(),
+              "updatedAt": datetime.now(
+                  timezone.utc
+              ).isoformat(),
               "recordCount": len(items),
               "soldCount": len(sold),
               "revenue": revenue,
-              "minimumTotal": minimum,
-              "bestCaseTotal": best,
+              "minimumTotal": minimum_total,
+              "bestCaseTotal": best_total,
+              "missingEstimateCount": len(missing),
               "items": items
           }
 
+          # Save JSON file
           os.makedirs("data", exist_ok=True)
 
-          with open("data/sales.json", "w", encoding="utf-8") as f:
-              json.dump(payload, f, ensure_ascii=False, indent=2)
+          with open(
+              "data/sales.json",
+              "w",
+              encoding="utf-8"
+          ) as f:
+              json.dump(
+                  payload,
+                  f,
+                  ensure_ascii=False,
+                  indent=2
+              )
 
-          print("Records:", len(items))
-          print("Sold:", len(sold))
-          print("Revenue:", revenue)
-          print("Minimum:", minimum)
-          print("Best Case:", best)
-          print("Sold without date:", sum(
-              x["soldDate"] is None for x in sold
-          ))
+          print("=" * 50)
+          print("sales.json generated successfully")
+          print("=" * 50)
           PY
 
       - name: Publish updated data
