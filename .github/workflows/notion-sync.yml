@@ -62,6 +62,52 @@ jobs:
                   break
 
               cursor = data["next_cursor"]
+          
+          from collections import Counter
+          import re
+
+          def get_text(prop):
+              return "".join(
+                  x.get("plain_text", "")
+                  for x in prop.get("rich_text", [])
+              )
+
+          print("\n=== STATUS VALUES ===")
+          print(dict(Counter(
+              (r["properties"]["Status"].get("status") or {}).get("name", "EMPTY")
+              for r in rows
+          )))
+
+          print("\n=== OWNER VALUES ===")
+          print(dict(Counter(
+              owner["name"]
+              for r in rows
+              for owner in r["properties"]["Owner"].get("multi_select", [])
+          )))
+
+          print("\n=== SALES DATE FORMATS ===")
+          for field in ("Sales Update", "Comment"):
+              dates = []
+              for r in rows:
+                  value = get_text(r["properties"][field])
+                  dates.extend(re.findall(
+                      r"\b\d{1,2}[./-]\d{1,2}(?:[./-]\d{2,4})?\b",
+                      value
+                  ))
+              print(field, Counter(dates).most_common(15))
+
+          print("\n=== SOLD ITEM FIELD COMPLETENESS ===")
+          sold = [
+              r for r in rows
+              if (r["properties"]["Status"].get("status") or {}).get("name", "").lower()
+              in ("sold", "verkauft")
+          ]
+          print("Sold records:", len(sold))
+          for field in ("Sales Profit", "Minimum", "Best Case"):
+              print(field, sum(
+                  r["properties"][field].get("number") is not None
+                  for r in sold
+              ))
 
           print("=" * 50)
           print("NOTION CONNECTION SUCCESSFUL")
