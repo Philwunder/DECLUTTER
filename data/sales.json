@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-12T20:05:29.677480+00:00",
+  "updatedAt": "2026-11-12T20:09:13.521558+00:00",
   "recordCount": 102,
   "soldCount": 7,
-  "revenue": 522.81,
-  "minimumTotal": 4190.81,
-  "bestCaseTotal": 8762.81,
+  "revenue": 622.81,
+  "minimumTotal": 4290.81,
+  "bestCaseTotal": 8862.81,
   "missingEstimateCount": 0,
   "items": [
     {
@@ -387,7 +387,7 @@
       "owners": [
         "Philipp"
       ],
-      "profit": 200,
+      "profit": 300,
       "minimum": 80,
       "bestCase": 200,
       "soldDate": "2026-11-12"
