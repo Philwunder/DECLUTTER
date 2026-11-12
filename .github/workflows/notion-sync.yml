@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: notion-sync
@@ -16,6 +18,9 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -44,10 +49,8 @@ jobs:
           rows = []
           cursor = None
 
-          # Fetch all Notion records
           while True:
               body = {"page_size": 100}
-
               if cursor:
                   body["start_cursor"] = cursor
 
@@ -68,7 +71,6 @@ jobs:
 
               cursor = result["next_cursor"]
 
-          # Helper functions
           def rich_text(prop, key="rich_text"):
               return "".join(
                   part.get("plain_text", "")
@@ -82,7 +84,6 @@ jobs:
               )
 
               dates = []
-
               for match in matches:
                   try:
                       fmt = (
@@ -90,13 +91,11 @@ jobs:
                           if len(match.split(".")[-1]) == 2
                           else "%d.%m.%Y"
                       )
-
-                      parsed = datetime.strptime(
-                          match, fmt
-                      ).date().isoformat()
-
-                      dates.append(parsed)
-
+                      dates.append(
+                          datetime.strptime(
+                              match, fmt
+                          ).date().isoformat()
+                      )
                   except ValueError:
                       pass
 
@@ -109,7 +108,6 @@ jobs:
           def number(value):
               return value if value is not None else 0
 
-          # Transform Notion records
           items = []
 
           for row in rows:
@@ -124,7 +122,6 @@ jobs:
                   for owner in p["Owner"].get("multi_select", [])
               ]
 
-              # Display names
               owners = [
                   {
                       "Mama": "Ulrike",
@@ -134,7 +131,6 @@ jobs:
               ]
 
               name = rich_text(p["Item"], "title")
-
               profit = p["Sales Profit"].get("number")
               minimum = p["Minimum"].get("number")
               best = p["Best Case"].get("number")
@@ -156,108 +152,61 @@ jobs:
                   )
               })
 
-          # Separate sold and unsold items
           sold = [
-              item for item in items
-              if item["status"] == "Sold"
+              x for x in items
+              if x["status"] == "Sold"
           ]
 
           unsold = [
-              item for item in items
-              if item["status"] != "Sold"
+              x for x in items
+              if x["status"] != "Sold"
           ]
 
-          # Calculate financial totals
           revenue = sum(
-              number(item["profit"])
-              for item in sold
+              number(x["profit"]) for x in sold
           )
 
           minimum_total = revenue + sum(
-              number(item["minimum"])
-              for item in unsold
+              number(x["minimum"]) for x in unsold
           )
 
           best_total = revenue + sum(
-              number(item["bestCase"])
-              for item in unsold
+              number(x["bestCase"]) for x in unsold
           )
 
-          # Validate critical data
-          if any(item["profit"] is None for item in sold):
-              raise ValueError(
-                  "Sold item missing Sales Profit"
-              )
+          if any(x["profit"] is None for x in sold):
+              raise ValueError("Sold item missing profit")
 
-          if any(not item["owners"] for item in items):
-              raise ValueError(
-                  "Item missing Owner"
-              )
+          if any(not x["owners"] for x in items):
+              raise ValueError("Item missing owner")
 
           if any(
-              item["minimum"] is not None
-              and item["bestCase"] is not None
-              and item["minimum"] > item["bestCase"]
-              for item in unsold
+              x["minimum"] is not None
+              and x["bestCase"] is not None
+              and x["minimum"] > x["bestCase"]
+              for x in unsold
           ):
-              raise ValueError(
-                  "Minimum exceeds Best Case"
-              )
+              raise ValueError("Minimum exceeds Best Case")
 
-          if len(items) != len(rows):
-              raise ValueError(
-                  "Record count mismatch"
-              )
-
-          # Report missing price estimates
           missing = [
-              item for item in unsold
-              if item["minimum"] is None
-              or item["bestCase"] is None
+              x for x in unsold
+              if x["minimum"] is None
+              or x["bestCase"] is None
           ]
 
-          print("=" * 50)
-          print("NOTION SYNC REPORT")
-          print("=" * 50)
-
-          print("Total records:", len(items))
-          print("Sold:", len(sold))
-          print("Unsold:", len(unsold))
-          print("Revenue:", revenue)
-          print("Minimum total:", minimum_total)
-          print("Best Case total:", best_total)
-
-          print(
-              "Items with missing estimates:",
-              len(missing)
-          )
-
-          for item in missing:
-              print("Missing estimate:", item["name"])
-
-          print(
-              "Sold without date:",
-              sum(
-                  item["soldDate"] is None
-                  for item in sold
-              )
-          )
-
-          # Prepare public dashboard data
           payload = {
               "updatedAt": datetime.now(
                   timezone.utc
               ).isoformat(),
               "recordCount": len(items),
               "soldCount": len(sold),
-              "revenue": revenue,
-              "minimumTotal": minimum_total,
-              "bestCaseTotal": best_total,
+              "revenue": round(revenue, 2),
+              "minimumTotal": round(minimum_total, 2),
+              "bestCaseTotal": round(best_total, 2),
               "missingEstimateCount": len(missing),
               "items": items
           }
 
-          # Save JSON file
           os.makedirs("data", exist_ok=True)
 
           with open(
@@ -272,12 +221,17 @@ jobs:
                   indent=2
               )
 
-          print("=" * 50)
+          print("NOTION SYNC REPORT")
+          print("Total records:", len(items))
+          print("Sold:", len(sold))
+          print("Revenue:", round(revenue, 2))
+          print("Minimum:", round(minimum_total, 2))
+          print("Best Case:", round(best_total, 2))
+          print("Missing estimates:", len(missing))
           print("sales.json generated successfully")
-          print("=" * 50)
           PY
 
-      - name: Publish updated data
+      - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -291,3 +245,15 @@ jobs:
           else
             echo "No changes to commit"
           fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
