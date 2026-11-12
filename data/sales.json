@@ -1,0 +1,1238 @@
+{
+  "updatedAt": "2026-11-12T18:26:04.370620+00:00",
+  "recordCount": 102,
+  "soldCount": 6,
+  "revenue": 322.81,
+  "minimumTotal": 4070.81,
+  "bestCaseTotal": 8762.81,
+  "missingEstimateCount": 2,
+  "items": [
+    {
+      "id": "4166fd5d-7856-8031-9926-e8ba097181c4",
+      "name": "Desktop PC",
+      "status": "Not Started",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 50,
+      "bestCase": 100,
+      "soldDate": null
+    },
+    {
+      "id": "4166fd5d-7856-8082-8b8c-c48c5af86a72",
+      "name": "Blumenanhänger, Silber",
+      "status": "Online for Sale",
+      "owners": [
+        "Ulrike"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 30,
+      "soldDate": null
+    },
+    {
+      "id": "4166fd5d-7856-8010-b5b5-f5fc1d6502c3",
+      "name": "Schmetterlingsbrosche, Silber",
+      "status": "Online for Sale",
+      "owners": [
+        "Ulrike"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 30,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-806e-9510-f0e12c273bb7",
+      "name": "Kamera - Polaroid Autofocus 660, in Tasche",
+      "status": "Online for Sale",
+      "owners": [
+        "Diethelm"
+      ],
+      "profit": null,
+      "minimum": 30,
+      "bestCase": 50,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-80ac-9dbd-eda57e26f40a",
+      "name": "Klappzylinder",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 40,
+      "bestCase": 80,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-8042-9f83-c6c9466278ca",
+      "name": "Kameragriff mit Leuchte",
+      "status": "Online for Sale",
+      "owners": [
+        "Diethelm"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 20,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-800b-897d-dbe5c729fc44",
+      "name": "Kamera - Analog, in Tasche",
+      "status": "Online for Sale",
+      "owners": [
+        "Diethelm"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 20,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-8086-967c-ef2cd1a168de",
+      "name": "Kamera - Gelb-Schwarz",
+      "status": "Online for Sale",
+      "owners": [
+        "Diethelm"
+      ],
+      "profit": null,
+      "minimum": 15,
+      "bestCase": 60,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-80b7-9b91-d1e26d1b0e7d",
+      "name": "Kamera - Polaroid Colorpack 82",
+      "status": "Online for Sale",
+      "owners": [
+        "Diethelm"
+      ],
+      "profit": null,
+      "minimum": 15,
+      "bestCase": 30,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-8094-9ba5-cb8ebbec4e35",
+      "name": "Kamera - Pentax Zoom 105 Super",
+      "status": "Online for Sale",
+      "owners": [
+        "Diethelm"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 40,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-8097-96e1-c22b2a371d48",
+      "name": "Kamera - Pentax Zoom 70-M",
+      "status": "Online for Sale",
+      "owners": [
+        "Diethelm"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 45,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-8069-9d79-c531de75c12e",
+      "name": "Kamera - Pentax Zoom 105-R",
+      "status": "Online for Sale",
+      "owners": [
+        "Diethelm"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 40,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-80c1-8458-c6777d4b0f05",
+      "name": "Kamera - Unterwasserkamera",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 40,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-8005-a67b-deaf3dfebeeb",
+      "name": "Holztruhe / Sitzbank",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 60,
+      "bestCase": 100,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-80ff-8d1f-c073440113a1",
+      "name": "Vintage Kronleuchter",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 15,
+      "bestCase": 40,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-80ab-8c96-c6d6ab9da2d2",
+      "name": "CASIO Keyboard",
+      "status": "Online for Sale",
+      "owners": [
+        "Eva",
+        "Ulrike"
+      ],
+      "profit": null,
+      "minimum": 60,
+      "bestCase": 100,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-80bf-acac-dd0a84fba7cb",
+      "name": "Kommode, Schwarz",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 70,
+      "bestCase": 150,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-803c-a542-fb0909ef012a",
+      "name": "Stofftier - Handpuppe, Waschbär",
+      "status": "Sold",
+      "owners": [
+        "Ulrike"
+      ],
+      "profit": 11.81,
+      "minimum": 5,
+      "bestCase": 12.5,
+      "soldDate": "2026-11-08"
+    },
+    {
+      "id": "4146fd5d-7856-80ce-9a0c-fefefb2b4a64",
+      "name": "Handyhalter Auto CD",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 3,
+      "bestCase": 9,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-80d3-bc86-df5f98e52066",
+      "name": "Spielzeugwaage, Holz",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 20,
+      "soldDate": null
+    },
+    {
+      "id": "4146fd5d-7856-8030-a1f8-d1cf2f7f6e30",
+      "name": "Teleskop",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 45,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-8085-8273-d7d9cb30e7e1",
+      "name": "Fossil Kette mit Anhänger",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 20,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-809e-9987-f823b1052896",
+      "name": "Stofftier - Handpuppen, 3x",
+      "status": "Online for Sale",
+      "owners": [
+        "Ulrike"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 40,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-804c-8378-dcf2bf1cab1f",
+      "name": "Stofftier - Affe, Steiff",
+      "status": "Online for Sale",
+      "owners": [
+        "Ulrike"
+      ],
+      "profit": null,
+      "minimum": 30,
+      "bestCase": 50,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-8019-b0c2-e28f1a1e3126",
+      "name": "Kasperle Theater, Holz",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 75,
+      "bestCase": 129,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-80e6-8443-c20bbc888afc",
+      "name": "Stofftier - Krokodil, Sigikid",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 30,
+      "bestCase": 60,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-8073-9d78-d926065931c9",
+      "name": "Pokémonkarten - Restliche Sammlung",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 50,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-80d3-99c5-c2677505d627",
+      "name": "Pokémonkarte - Machomei",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 10,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-8074-b270-ec7393fc4664",
+      "name": "Pokémonkarte - Nockchan",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 18,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-808e-b7b5-ee9873c5af3f",
+      "name": "Pokémonkarte - Magneton",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 20,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-80a6-8e09-d90ef5e3b59d",
+      "name": "Pokémonkarten - Holo Sammlung",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 40,
+      "bestCase": 80,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-80f3-aeab-e4045fdfce0f",
+      "name": "Pokémonkarte - Glurak",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 80,
+      "bestCase": 200,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-80af-af5a-f6c555a473bf",
+      "name": "Schweizer Bürowerkzeug",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 35,
+      "bestCase": 60,
+      "soldDate": null
+    },
+    {
+      "id": "4136fd5d-7856-8090-9dd2-c8c0a803f32b",
+      "name": "HDMI Kabel, 10m",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": 15,
+      "minimum": 5,
+      "bestCase": 15,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8068-aa72-f3cb00b31c92",
+      "name": "Leap Motion",
+      "status": "Sold",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": 69,
+      "minimum": 35,
+      "bestCase": 70,
+      "soldDate": "2026-11-12"
+    },
+    {
+      "id": "4126fd5d-7856-8011-905e-c355a6502768",
+      "name": "CSL Mini PC Stick",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 15,
+      "bestCase": 25,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80c1-95f7-dbb87c1feb10",
+      "name": "Didgeridoo",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 50,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80d2-ae69-ceab4e3a9b26",
+      "name": "Adventskalender, Filz, 2x",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 20,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80d9-8097-f0c47c52be48",
+      "name": "Vintage Tasche, Braun",
+      "status": "Online for Sale",
+      "owners": [
+        "Ulrike"
+      ],
+      "profit": null,
+      "minimum": 25,
+      "bestCase": 50,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8041-b4be-cbd4e41f3dc9",
+      "name": "Vintage Tasche, Perlen",
+      "status": "Online for Sale",
+      "owners": [
+        "Ulrike"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 35,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80b9-970a-d68e72302956",
+      "name": "BREE Tasche, Blau",
+      "status": "Online for Sale",
+      "owners": [
+        "Ulrike"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 30,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8094-b83e-ce398aef619a",
+      "name": "Stofftiere, Sammlung",
+      "status": "Online for Sale",
+      "owners": [
+        "Family",
+        "Eva",
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 50,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80cd-bf7b-c043f091e20b",
+      "name": "Gesellschaftsspiele, Sammlung",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 75,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80b1-b9a9-dc9e292b7a48",
+      "name": "Aquabag, 20L",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 20,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8052-8d0c-da28d572b1f0",
+      "name": "Schwimmflossen",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 15,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8008-bfa7-d89898ea3dc9",
+      "name": "Aquadisc",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 15,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-803b-8400-dea979dcc59d",
+      "name": "DVD Sammlung, Diverse Filme",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 15,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80de-8263-c5f8d76fb0bb",
+      "name": "DVD Sammlung, Hörzu",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 10,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-809f-ade3-cb8a2cd08d39",
+      "name": "Nintendo DS, Set",
+      "status": "Online for Sale",
+      "owners": [
+        "Ulrike"
+      ],
+      "profit": null,
+      "minimum": 50,
+      "bestCase": 150,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80ed-ac24-ed7ea4f49157",
+      "name": "Gameboy Spiele, Set",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 100,
+      "bestCase": 160,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8027-88a0-e509596ebb44",
+      "name": "Silbermünzensammlung",
+      "status": "Not Started",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 800,
+      "bestCase": 1550,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80c2-b024-ea7d6ee8250a",
+      "name": "Kanadische Münzsammlung",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 50,
+      "bestCase": 70,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8016-91d0-dcd0bac212c0",
+      "name": "Gameboy Advance + Mario",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 105,
+      "bestCase": 160,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8054-93c8-e93309803614",
+      "name": "Gameboy Advance + Pokémon",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 115,
+      "bestCase": 160,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8033-a0df-e3693929c025",
+      "name": "Gameboy Color + GB Camera",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 80,
+      "bestCase": 120,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80e9-ab14-d944a48a7dea",
+      "name": "Gameboy",
+      "status": "Not Started",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": null,
+      "bestCase": null,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8036-8a68-ebd800ccda5a",
+      "name": "Ninentdo 64, Komplettset",
+      "status": "Not Started",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 250,
+      "bestCase": 525,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-803c-89b3-d5dc1121be87",
+      "name": "SNES SET",
+      "status": "Not Started",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": null,
+      "bestCase": null,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8072-bba9-ed79e822898f",
+      "name": "Nintendo Wii Console",
+      "status": "Not Started",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 45,
+      "bestCase": 75,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80d8-b36a-d8d35d7aa75b",
+      "name": "Nintendo 3DS XL Zelda Edition",
+      "status": "Not Started",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 100,
+      "bestCase": 350,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-805c-8835-dd219ae1c5ab",
+      "name": "Gamecube, Komplettset",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 400,
+      "bestCase": 700,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80fc-9f3e-c9e863faebee",
+      "name": "SNES Spiele, Set",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 90,
+      "bestCase": 180,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8037-8c6c-f9337cd32e7e",
+      "name": "Nintendo Wii Spiele, 6x",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 40,
+      "bestCase": 90,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80f4-bc4d-d3407126ebde",
+      "name": "Nintento 3DS Spiele, 6x",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 80,
+      "bestCase": 130,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-807a-912c-ff0929028cdc",
+      "name": "NES SPiel: Kirby’s Adventure",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 90,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-807d-b0f9-f55be0f850b9",
+      "name": "CD Spiel: Mario wird Vermisst",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 30,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8022-bb69-dbf0b17357a0",
+      "name": "CD: Nintendo Sounds",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 70,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-802f-a71f-cefa096c96cf",
+      "name": "CD: Banjo Kazooie",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 70,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80d4-916f-d75f8726d5cf",
+      "name": "CD: Lylat Wars",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 70,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80fc-bbd3-c93978611d46",
+      "name": "CD: Mario",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 70,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-809c-9f5b-cc317c937d0b",
+      "name": "CD: Pokémon, Deutsch",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 15,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8058-9bf3-e91bf3c520d1",
+      "name": "CD: Donkey Kong",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 70,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8052-97fb-e14ce58385ce",
+      "name": "CD: Pokémon",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 35,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8012-8500-d4cd810a90c9",
+      "name": "MIDI Controller",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 20,
+      "bestCase": 45,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8003-a02e-ebde0c97bc4f",
+      "name": "DJ Turntables",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 30,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8043-bdff-eb0e9ad269f6",
+      "name": "Kamera, Bausatz",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 25,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8022-b319-e3c3dfc1cbef",
+      "name": "Stroboskop",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 15,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8001-9dad-f2379bc4ac53",
+      "name": "Aktivlautsprecher, 2x",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 50,
+      "bestCase": 150,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-802e-ada7-fdbfbc692da0",
+      "name": "Thaibox Equipment",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 30,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-801b-a700-c99299a7d2ba",
+      "name": "Drohne",
+      "status": "Sold",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": 40,
+      "minimum": 20,
+      "bestCase": 50,
+      "soldDate": "2026-11-09"
+    },
+    {
+      "id": "4126fd5d-7856-80e6-b02d-e4a2bb968863",
+      "name": "Schwebender Weinhalter",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 15,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-801b-bb96-c3b7578624fa",
+      "name": "Beistelltisch, Weiß",
+      "status": "Sold",
+      "owners": [
+        "Eva"
+      ],
+      "profit": 30,
+      "minimum": 10,
+      "bestCase": 40,
+      "soldDate": "2026-11-07"
+    },
+    {
+      "id": "4126fd5d-7856-80a3-be8a-ec6fe9b5e193",
+      "name": "Katzenspielzeug",
+      "status": "Online for Sale",
+      "owners": [
+        "Eva"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 30,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8093-b20c-d83fd87b24c0",
+      "name": "Stuhl, High Heel, Pink",
+      "status": "Sold",
+      "owners": [
+        "Eva"
+      ],
+      "profit": 30,
+      "minimum": 0,
+      "bestCase": 40,
+      "soldDate": "2026-11-10"
+    },
+    {
+      "id": "4126fd5d-7856-8072-b856-d5a99edfa581",
+      "name": "Stuhl, Stokke Move, Blau",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 75,
+      "bestCase": 190,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8011-95f6-dcd5d64b314c",
+      "name": "Kerzenständer",
+      "status": "Sold",
+      "owners": [
+        "Family"
+      ],
+      "profit": 142,
+      "minimum": 50,
+      "bestCase": 150,
+      "soldDate": "2026-11-06"
+    },
+    {
+      "id": "4126fd5d-7856-80c4-9282-e6aa054b0629",
+      "name": "Deko Schildkröte",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 15,
+      "bestCase": 60,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8014-8ef0-e0659e2cee66",
+      "name": "Glasttisch",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 50,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-809c-b5e4-e18b0284d637",
+      "name": "Lederliege, Schwarz",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 50,
+      "bestCase": 180,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80d2-8723-d801dfb1abe3",
+      "name": "Joghurtbereiter",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 15,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80c2-b33b-f5a17a130f2e",
+      "name": "Entsafter",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 35,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8019-ac27-ef1925dc814a",
+      "name": "Küchemaschine",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 29,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8087-8109-fc1c5bff527b",
+      "name": "Friteuse",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 5,
+      "bestCase": 18,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8035-96e1-efe7d8f3f679",
+      "name": "Stofftier - Löwe, Steiff",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 50,
+      "bestCase": 110,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80f9-9352-f351956562a7",
+      "name": "Cocktail Shaker",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 10,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-8036-86ef-fb281cd70845",
+      "name": "Eierbecher, 3x",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 9,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-803a-92c3-d5b1c7600662",
+      "name": "Edelstahlkanne",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 10,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-801b-a3ce-d53658cbd853",
+      "name": "Weinhalter",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 9,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-804d-a42e-e7101a2e7301",
+      "name": "Milchkanne",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 0,
+      "bestCase": 20,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-808c-afac-febc44d1cd01",
+      "name": "Dörrautomat",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 29,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-805f-8048-c00c8e8ca74c",
+      "name": "Eismaschine",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 10,
+      "bestCase": 25,
+      "soldDate": null
+    },
+    {
+      "id": "4126fd5d-7856-80ab-822e-dc07fb4278b0",
+      "name": "Couch Set, Dunkelgrün",
+      "status": "Online for Sale",
+      "owners": [
+        "Family"
+      ],
+      "profit": null,
+      "minimum": 50,
+      "bestCase": 150,
+      "soldDate": null
+    }
+  ]
+}
