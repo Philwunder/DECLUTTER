@@ -9,29 +9,32 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: notion-sync
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Fetch Notion data and inspect schema
+      - name: Fetch and transform Notion data
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
         run: |
           python3 - <<'PY'
           import os
+          import re
           import json
           import urllib.request
+          from datetime import datetime, timezone
 
-          token = os.environ["NOTION_TOKEN"]
           source = "4126fd5d-7856-80f6-ac0d-000ba4d30431"
           url = f"https://api.notion.com/v1/data_sources/{source}/query"
 
           headers = {
-              "Authorization": f"Bearer {token}",
+              "Authorization": "Bearer " + os.environ["NOTION_TOKEN"],
               "Notion-Version": "2025-09-03",
               "Content-Type": "application/json"
           }
@@ -39,10 +42,8 @@ jobs:
           rows = []
           cursor = None
 
-          # Fetch all records, including pagination
           while True:
               body = {"page_size": 100}
-
               if cursor:
                   body["start_cursor"] = cursor
 
@@ -54,115 +55,133 @@ jobs:
               )
 
               with urllib.request.urlopen(request) as response:
-                  data = json.load(response)
+                  result = json.load(response)
 
-              rows.extend(data["results"])
+              rows.extend(result["results"])
 
-              if not data.get("has_more"):
+              if not result.get("has_more"):
                   break
+              cursor = result["next_cursor"]
 
-              cursor = data["next_cursor"]
-          
-          from collections import Counter
-          import re
-
-          def get_text(prop):
+          def rich_text(prop, key="rich_text"):
               return "".join(
-                  x.get("plain_text", "")
-                  for x in prop.get("rich_text", [])
+                  part.get("plain_text", "")
+                  for part in prop.get(key, [])
               )
 
-          print("\n=== STATUS VALUES ===")
-          print(dict(Counter(
-              (r["properties"]["Status"].get("status") or {}).get("name", "EMPTY")
-              for r in rows
-          )))
-
-          print("\n=== OWNER VALUES ===")
-          print(dict(Counter(
-              owner["name"]
-              for r in rows
-              for owner in r["properties"]["Owner"].get("multi_select", [])
-          )))
-
-          print("\n=== SALES DATE FORMATS ===")
-          for field in ("Sales Update", "Comment"):
+          def sales_date(value):
+              matches = re.findall(
+                  r"(?<!\d)(\d{1,2}\.\d{1,2}\.\d{2,4})(?!\d)",
+                  value
+              )
               dates = []
-              for r in rows:
-                  value = get_text(r["properties"][field])
-                  dates.extend(re.findall(
-                      r"\b\d{1,2}[./-]\d{1,2}(?:[./-]\d{2,4})?\b",
-                      value
-                  ))
-              print(field, Counter(dates).most_common(15))
+              for match in matches:
+                  try:
+                      fmt = "%d.%m.%y" if len(match.split(".")[-1]) == 2 else "%d.%m.%Y"
+                      dates.append(datetime.strptime(match, fmt).date().isoformat())
+                  except ValueError:
+                      pass
+              return dates[0] if len(set(dates)) == 1 else None
 
-          print("\n=== SOLD ITEM FIELD COMPLETENESS ===")
-          sold = [
-              r for r in rows
-              if (r["properties"]["Status"].get("status") or {}).get("name", "").lower()
-              in ("sold", "verkauft")
-          ]
-          print("Sold records:", len(sold))
-          for field in ("Sales Profit", "Minimum", "Best Case"):
-              print(field, sum(
-                  r["properties"][field].get("number") is not None
-                  for r in sold
-              ))
+          items = []
 
-          print("=" * 50)
-          print("NOTION CONNECTION SUCCESSFUL")
-          print(f"Total records: {len(rows)}")
-          print("=" * 50)
+          for row in rows:
+              p = row["properties"]
+              status = (p["Status"].get("status") or {}).get("name", "")
+              owners = [
+                  x["name"] for x in
+                  p["Owner"].get("multi_select", [])
+              ]
+              owners = [
+                  {"Mama": "Ulrike", "Papa": "Diethelm"}.get(x, x)
+                  for x in owners
+              ]
 
-          # Inspect property names and types
-          print("\nNOTION PROPERTY SCHEMA:")
+              name = rich_text(p["Item"], "title")
+              profit = p["Sales Profit"].get("number")
+              minimum = p["Minimum"].get("number")
+              best = p["Best Case"].get("number")
 
-          if rows:
-              properties = rows[0].get("properties", {})
+              date = sales_date(rich_text(p["Sales Update"]))
 
-              for name, prop in properties.items():
-                  prop_type = prop.get("type", "unknown")
-                  print(f"  {name}: {prop_type}")
-          else:
-              print("No records found.")
+              items.append({
+                  "id": row["id"],
+                  "name": name,
+                  "status": status,
+                  "owners": owners,
+                  "profit": profit,
+                  "minimum": minimum,
+                  "bestCase": best,
+                  "soldDate": date if status == "Sold" else None
+              })
 
-          print("=" * 50)
+          sold = [x for x in items if x["status"] == "Sold"]
+          unsold = [x for x in items if x["status"] != "Sold"]
 
-          # Save connection status only
-          # No private Notion records are published
-          os.makedirs("data", exist_ok=True)
+          def number(value):
+              return value if value is not None else 0
 
-          status = {
-              "connected": True,
-              "records": len(rows),
-              "data_source_id": source
+          revenue = sum(number(x["profit"]) for x in sold)
+          minimum = revenue + sum(number(x["minimum"]) for x in unsold)
+          best = revenue + sum(number(x["bestCase"]) for x in unsold)
+
+          if any(x["profit"] is None for x in sold):
+              raise ValueError("Sold item missing Sales Profit")
+
+          if any(not x["owners"] for x in items):
+              raise ValueError("Item missing Owner")
+
+          if any(
+              x["minimum"] is None or x["bestCase"] is None
+              for x in unsold
+          ):
+              raise ValueError("Unsold item missing price estimate")
+
+          if any(
+              x["minimum"] > x["bestCase"]
+              for x in unsold
+          ):
+              raise ValueError("Minimum exceeds Best Case")
+
+          if len(items) != len(rows):
+              raise ValueError("Record count mismatch")
+
+          payload = {
+              "updatedAt": datetime.now(timezone.utc).isoformat(),
+              "recordCount": len(items),
+              "soldCount": len(sold),
+              "revenue": revenue,
+              "minimumTotal": minimum,
+              "bestCaseTotal": best,
+              "items": items
           }
 
-          with open(
-              "data/sync-status.json",
-              "w",
-              encoding="utf-8"
-          ) as f:
-              json.dump(
-                  status,
-                  f,
-                  indent=2,
-                  ensure_ascii=False
-              )
+          os.makedirs("data", exist_ok=True)
 
-          print("Sync status saved successfully.")
+          with open("data/sales.json", "w", encoding="utf-8") as f:
+              json.dump(payload, f, ensure_ascii=False, indent=2)
+
+          print("Records:", len(items))
+          print("Sold:", len(sold))
+          print("Revenue:", revenue)
+          print("Minimum:", minimum)
+          print("Best Case:", best)
+          print("Sold without date:", sum(
+              x["soldDate"] is None for x in sold
+          ))
           PY
 
-      - name: Commit sync status
+      - name: Publish updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/sync-status.json
+          git add data/sales.json
 
           if ! git diff --cached --quiet; then
-            git commit -m "Update Notion sync status"
-            git push
+            git commit -m "Update live sales data"
+            git pull --rebase origin main
+            git push origin HEAD:main
           else
-            echo "No changes to commit."
+            echo "No changes to commit"
           fi
