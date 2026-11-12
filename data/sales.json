@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-12T19:38:05.000332+00:00",
+  "updatedAt": "2026-11-12T20:05:29.677480+00:00",
   "recordCount": 102,
   "soldCount": 7,
   "revenue": 522.81,
   "minimumTotal": 4190.81,
   "bestCaseTotal": 8762.81,
-  "missingEstimateCount": 2,
+  "missingEstimateCount": 0,
   "items": [
     {
       "id": "4166fd5d-7856-8031-9926-e8ba097181c4",
@@ -678,8 +678,8 @@
         "Philipp"
       ],
       "profit": null,
-      "minimum": null,
-      "bestCase": null,
+      "minimum": 0,
+      "bestCase": 0,
       "soldDate": null
     },
     {
@@ -702,8 +702,8 @@
         "Philipp"
       ],
       "profit": null,
-      "minimum": null,
-      "bestCase": null,
+      "minimum": 0,
+      "bestCase": 0,
       "soldDate": null
     },
     {
