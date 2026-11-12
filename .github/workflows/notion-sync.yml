@@ -12,15 +12,19 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Fetch Notion data
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Notion data and inspect schema
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
         run: |
           python3 - <<'PY'
-          import os, json, urllib.request
+          import os
+          import json
+          import urllib.request
 
           token = os.environ["NOTION_TOKEN"]
           source = "4126fd5d-7856-80f6-ac0d-000ba4d30431"
@@ -35,8 +39,10 @@ jobs:
           rows = []
           cursor = None
 
+          # Fetch all records, including pagination
           while True:
               body = {"page_size": 100}
+
               if cursor:
                   body["start_cursor"] = cursor
 
@@ -51,27 +57,66 @@ jobs:
                   data = json.load(response)
 
               rows.extend(data["results"])
+
               if not data.get("has_more"):
                   break
+
               cursor = data["next_cursor"]
 
+          print("=" * 50)
+          print("NOTION CONNECTION SUCCESSFUL")
+          print(f"Total records: {len(rows)}")
+          print("=" * 50)
+
+          # Inspect property names and types
+          print("\nNOTION PROPERTY SCHEMA:")
+
+          if rows:
+              properties = rows[0].get("properties", {})
+
+              for name, prop in properties.items():
+                  prop_type = prop.get("type", "unknown")
+                  print(f"  {name}: {prop_type}")
+          else:
+              print("No records found.")
+
+          print("=" * 50)
+
+          # Save connection status only
+          # No private Notion records are published
           os.makedirs("data", exist_ok=True)
 
-          # Only metadata for this initial connection test.
-          # Do not publish raw Notion records.
-          with open("data/sync-status.json", "w") as f:
-              json.dump({
-                  "connected": True,
-                  "records": len(rows)
-              }, f, indent=2)
+          status = {
+              "connected": True,
+              "records": len(rows),
+              "data_source_id": source
+          }
 
-          print(f"Notion connection successful: {len(rows)} records")
+          with open(
+              "data/sync-status.json",
+              "w",
+              encoding="utf-8"
+          ) as f:
+              json.dump(
+                  status,
+                  f,
+                  indent=2,
+                  ensure_ascii=False
+              )
+
+          print("Sync status saved successfully.")
           PY
 
       - name: Commit sync status
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add data/sync-status.json
-          git diff --cached --quiet || git commit -m "Update Notion sync status"
-          git push
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Notion sync status"
+            git push
+          else
+            echo "No changes to commit."
+          fi
