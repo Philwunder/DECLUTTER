@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T07:50:09.863660+00:00",
+  "updatedAt": "2026-11-13T07:51:54.194784+00:00",
   "recordCount": 102,
   "soldCount": 7,
   "revenue": 337.81,
@@ -17,7 +17,8 @@
       "profit": null,
       "minimum": 50,
       "bestCase": 100,
-      "soldDate": null
+      "soldDate": null,
+      "link": "-"
     },
     {
       "id": "4166fd5d-7856-8082-8b8c-c48c5af86a72",
@@ -29,7 +30,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 30,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/silber-blumenanhaenger-vintage-filigran/3569249103-157-1954"
     },
     {
       "id": "4166fd5d-7856-8010-b5b5-f5fc1d6502c3",
@@ -41,7 +43,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 30,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/vintage-schmetterlingsbrosche-silber/3569246903-157-1954"
     },
     {
       "id": "4146fd5d-7856-806e-9510-f0e12c273bb7",
@@ -53,7 +56,8 @@
       "profit": null,
       "minimum": 30,
       "bestCase": 50,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/polaroid-autofocus-660-vintage-mit-tasche/3567868698-245-1954"
     },
     {
       "id": "4146fd5d-7856-80ac-9dbd-eda57e26f40a",
@@ -65,7 +69,8 @@
       "profit": null,
       "minimum": 40,
       "bestCase": 80,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/antiker-klappzylinder-chapeau-claque-mit-koffer/3567870831-240-1954"
     },
     {
       "id": "4146fd5d-7856-8042-9f83-c6c9466278ca",
@@ -77,7 +82,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 20,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/cullmann-power-handygrip-p-vintage-kameragriff-mit-leuchte/3567863519-245-1954"
     },
     {
       "id": "4146fd5d-7856-800b-897d-dbe5c729fc44",
@@ -89,7 +95,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 20,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/analoge-35mm-kamera-mit-tasche-film-zubehoer-vintage/3567860721-245-1954"
     },
     {
       "id": "4146fd5d-7856-8086-967c-ef2cd1a168de",
@@ -101,7 +108,8 @@
       "profit": null,
       "minimum": 15,
       "bestCase": 60,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/vintage-35mm-kamera-gelb-schwarz-analogkamera-mit-blitz/3567857991-245-1954"
     },
     {
       "id": "4146fd5d-7856-80b7-9b91-d1e26d1b0e7d",
@@ -113,7 +121,8 @@
       "profit": null,
       "minimum": 15,
       "bestCase": 30,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/polaroid-colorpack-82-land-camera-vintage-sofortbildkamera-70er/3567855876-245-1954"
     },
     {
       "id": "4146fd5d-7856-8094-9ba5-cb8ebbec4e35",
@@ -125,7 +134,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 40,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pentax-zoom-105-super-analoge-35mm-kamera-vintage/3567851404-245-1954"
     },
     {
       "id": "4146fd5d-7856-8097-96e1-c22b2a371d48",
@@ -137,7 +147,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 45,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pentax-zoom-70-m-analoge-35mm-kamera-vintage/3567849606-245-1954"
     },
     {
       "id": "4146fd5d-7856-8069-9d79-c531de75c12e",
@@ -149,7 +160,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 40,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pentax-zoom-105-r-analoge-35mm-kamera-mit-autofokus-zoom/3567847400-245-1954"
     },
     {
       "id": "4146fd5d-7856-80c1-8458-c6777d4b0f05",
@@ -161,7 +173,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 40,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/cullmann-mauritius-unterwasserkamera-45-m-analog-35-mm-retro/3567845165-245-1954"
     },
     {
       "id": "4146fd5d-7856-8005-a67b-deaf3dfebeeb",
@@ -173,7 +186,8 @@
       "profit": null,
       "minimum": 60,
       "bestCase": 100,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/grosse-holztruhe-sitztruhe-120-cm-landhausstil-massiv-stabil/3567841810-88-1954"
     },
     {
       "id": "4146fd5d-7856-80ff-8d1f-c073440113a1",
@@ -185,7 +199,8 @@
       "profit": null,
       "minimum": 15,
       "bestCase": 40,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/vintage-kronleuchter-5-armig-weiss-gold-landhausstil/3567838711-82-1954"
     },
     {
       "id": "4146fd5d-7856-80ab-8c96-c6d6ab9da2d2",
@@ -198,7 +213,8 @@
       "profit": null,
       "minimum": 60,
       "bestCase": 100,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/casio-lk-90tv-keyboard-mit-leuchttasten-staender/3567834910-74-1954"
     },
     {
       "id": "4146fd5d-7856-80bf-acac-dd0a84fba7cb",
@@ -210,7 +226,8 @@
       "profit": null,
       "minimum": 70,
       "bestCase": 150,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/vintage-chippendale-kommode-konsolentisch-aus-holz-schwarz/3567640276-88-1954"
     },
     {
       "id": "4146fd5d-7856-803c-a542-fb0909ef012a",
@@ -222,7 +239,8 @@
       "profit": 11.81,
       "minimum": 5,
       "bestCase": 12.5,
-      "soldDate": "2026-11-08"
+      "soldDate": "2026-11-08",
+      "link": "https://www.kleinanzeigen.de/s-anzeige/4-vintage-tier-handpuppen-waschbaer-igel-hahn-schwein/3567062198-23-1954"
     },
     {
       "id": "4146fd5d-7856-80ce-9a0c-fefefb2b4a64",
@@ -234,7 +252,8 @@
       "profit": null,
       "minimum": 3,
       "bestCase": 9,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/mpow-auto-handyhalterung-cd-schacht-universal/3567479582-223-1954"
     },
     {
       "id": "4146fd5d-7856-80d3-bc86-df5f98e52066",
@@ -246,7 +265,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 20,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/vintage-kinderwaage-aus-holz-balkenwaage-mit-metallschalen/3567482371-23-1954"
     },
     {
       "id": "4146fd5d-7856-8030-a1f8-d1cf2f7f6e30",
@@ -258,7 +278,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 45,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/optus-spiegelteleskop-76-700-mit-stativ-astronomie/3567476310-242-1954"
     },
     {
       "id": "4136fd5d-7856-8085-8273-d7d9cb30e7e1",
@@ -270,7 +291,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 20,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/fossil-herren-halskette-edelstahl-anhaenger-mit-lederband/3567111775-157-1954"
     },
     {
       "id": "4136fd5d-7856-809e-9987-f823b1052896",
@@ -282,7 +304,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 40,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/4-vintage-tier-handpuppen-waschbaer-igel-hahn-schwein/3567062198-23-1954"
     },
     {
       "id": "4136fd5d-7856-804c-8378-dcf2bf1cab1f",
@@ -294,7 +317,8 @@
       "profit": null,
       "minimum": 30,
       "bestCase": 50,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/vintage-steiff-affe-schimpanse-aelteres-plueschtier/3567058980-23-1954"
     },
     {
       "id": "4136fd5d-7856-8019-b0c2-e28f1a1e3126",
@@ -306,7 +330,8 @@
       "profit": null,
       "minimum": 75,
       "bestCase": 129,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/grosses-kasperletheater-aus-holz-mit-11-handpuppen-vintage/3567484511-23-1954"
     },
     {
       "id": "4136fd5d-7856-80e6-8443-c20bbc888afc",
@@ -318,7 +343,8 @@
       "profit": null,
       "minimum": 30,
       "bestCase": 60,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/schwarzes-pluesch-krokodil-von-sigikid-vintage-kuscheltier/3567056187-23-1954"
     },
     {
       "id": "4136fd5d-7856-8073-9d78-d926065931c9",
@@ -330,7 +356,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 50,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pok-mon-karten-sammlung-1999-base-set-jungle-fossil-/3567034501-234-1954"
     },
     {
       "id": "4136fd5d-7856-80d3-99c5-c2677505d627",
@@ -342,7 +369,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 10,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pok-mon-machomei-holo-8-102-1-edition-base-set-1999/3567031666-234-1954"
     },
     {
       "id": "4136fd5d-7856-8074-b270-ec7393fc4664",
@@ -354,7 +382,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 18,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pok-mon-nockchan-holo-7-102-base-set-1999-deutsch/3567029867-234-1954"
     },
     {
       "id": "4136fd5d-7856-808e-b7b5-ee9873c5af3f",
@@ -366,7 +395,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 20,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pok-mon-magneton-holo-9-102-base-set-1999-deutsch/3567028203-234-1954"
     },
     {
       "id": "4136fd5d-7856-80a6-8e09-d90ef5e3b59d",
@@ -378,7 +408,8 @@
       "profit": null,
       "minimum": 40,
       "bestCase": 80,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pok-mon-kartensammlung-1999-108-karten-3-holos-base-set/3567041011-234-1954"
     },
     {
       "id": "4136fd5d-7856-80f3-aeab-e4045fdfce0f",
@@ -390,7 +421,8 @@
       "profit": null,
       "minimum": 80,
       "bestCase": 200,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pok-mon-glurak-holo-4-102-base-set-1999-deutsch-vintage/3567024968-234-1954"
     },
     {
       "id": "4136fd5d-7856-80af-af5a-f6c555a473bf",
@@ -402,7 +434,8 @@
       "profit": null,
       "minimum": 35,
       "bestCase": 60,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/wenger-swiss-business-tool-schweizer-multifunktionswerkzeug/3566299265-234-1954"
     },
     {
       "id": "4136fd5d-7856-8090-9dd2-c8c0a803f32b",
@@ -414,7 +447,8 @@
       "profit": 15,
       "minimum": 5,
       "bestCase": 15,
-      "soldDate": "2026-11-12"
+      "soldDate": "2026-11-12",
+      "link": "https://www.kleinanzeigen.de/s-anzeige/hdmi-auf-mini-hdmi-kabel-10-m-inkl-micro-hdmi-adapter/3566297836-225-1954"
     },
     {
       "id": "4126fd5d-7856-8068-aa72-f3cb00b31c92",
@@ -426,7 +460,8 @@
       "profit": 69,
       "minimum": 35,
       "bestCase": 70,
-      "soldDate": "2026-11-12"
+      "soldDate": "2026-11-12",
+      "link": "https://www.kleinanzeigen.de/s-anzeige/leap-motion-controller-3d-handtracking-gestensteuerung-vr/3566296916-168-1954"
     },
     {
       "id": "4126fd5d-7856-8011-905e-c355a6502768",
@@ -438,7 +473,8 @@
       "profit": null,
       "minimum": 15,
       "bestCase": 25,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/csl-mini-pc-on-a-stick-hdmi-mini-computer/3566295452-228-1954"
     },
     {
       "id": "4126fd5d-7856-80c1-95f7-dbb87c1feb10",
@@ -450,7 +486,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 50,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/didgeridoo-aus-holz-ca-130-cm-aboriginal-stil-handbemalt/3565891286-74-1954"
     },
     {
       "id": "4126fd5d-7856-80d2-ae69-ceab4e3a9b26",
@@ -462,7 +499,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 20,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/2-adventskalender-weihnachtswichtel-filz-24-taschen/3565709883-246-1954"
     },
     {
       "id": "4126fd5d-7856-80d9-8097-f0c47c52be48",
@@ -474,7 +512,8 @@
       "profit": null,
       "minimum": 25,
       "bestCase": 50,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/vintage-handtasche-braun-aussergewoehnliches-design/3565706722-156-1954"
     },
     {
       "id": "4126fd5d-7856-8041-b4be-cbd4e41f3dc9",
@@ -486,7 +525,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 35,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/vintage-abendtasche-clutch-perlen-pailletten/3565702579-156-1954"
     },
     {
       "id": "4126fd5d-7856-80b9-970a-d68e72302956",
@@ -498,7 +538,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 30,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/bree-umhaengetasche-in-blau/3565704564-156-1954"
     },
     {
       "id": "4126fd5d-7856-8094-b83e-ce398aef619a",
@@ -512,7 +553,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 50,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/kuscheltiere-sammlung-grosser-teddy-krokodil-gorilla-affen/3565683776-23-1954"
     },
     {
       "id": "4126fd5d-7856-80cd-bf7b-c043f091e20b",
@@ -524,7 +566,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 75,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/brettspiele-sammlung-schach-monopoly-scrabble-vintage/3565679004-23-1954"
     },
     {
       "id": "4126fd5d-7856-80b1-b9a9-dc9e292b7a48",
@@ -536,7 +579,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 20,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/arteesol-dry-bag-20l-wasserdichter-packsack-gelb/3565673829-156-1954"
     },
     {
       "id": "4126fd5d-7856-8052-8d0c-da28d572b1f0",
@@ -548,7 +592,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 15,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/schwimmflossen-wasserschuhe-schnorchelset/3565670099-230-1954"
     },
     {
       "id": "4126fd5d-7856-8008-bfa7-d89898ea3dc9",
@@ -560,7 +605,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 15,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/aquato-aquadisc-wasser-frisbee-wurfscheibe/3565666552-230-1954"
     },
     {
       "id": "4126fd5d-7856-803b-8400-dea979dcc59d",
@@ -572,7 +618,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 15,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/dvd-sammlung-14-filme-serien-comedy-pc-spiele/3565299739-79-1954"
     },
     {
       "id": "4126fd5d-7856-80de-8263-c5f8d76fb0bb",
@@ -584,7 +631,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 10,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/8-dvds-im-paket-hoerzu-edition-filmklassiker-dokumentationen/3565296366-79-1954"
     },
     {
       "id": "4126fd5d-7856-809f-ade3-cb8a2cd08d39",
@@ -596,7 +644,8 @@
       "profit": null,
       "minimum": 50,
       "bestCase": 150,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-ds-lite-tuerkis-ice-blue-mit-2-spielen-ladekabel/3565210520-279-1954"
     },
     {
       "id": "4126fd5d-7856-80ed-ac24-ed7ea4f49157",
@@ -608,7 +657,8 @@
       "profit": null,
       "minimum": 100,
       "bestCase": 160,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/4-nintendo-game-boy-spiele-tetris-koenig-der-loewen-a-o-pb/3565189101-227-1954"
     },
     {
       "id": "4126fd5d-7856-8027-88a0-e509596ebb44",
@@ -620,7 +670,8 @@
       "profit": null,
       "minimum": 800,
       "bestCase": 1550,
-      "soldDate": null
+      "soldDate": null,
+      "link": "-"
     },
     {
       "id": "4126fd5d-7856-80c2-b024-ea7d6ee8250a",
@@ -632,7 +683,8 @@
       "profit": null,
       "minimum": 50,
       "bestCase": 70,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/kanada-1989-proof-muenzsatz-royal-canadian-mint-7-muenzen-mit-s/3563641692-234-1954"
     },
     {
       "id": "4126fd5d-7856-8016-91d0-dcd0bac212c0",
@@ -644,7 +696,8 @@
       "profit": null,
       "minimum": 105,
       "bestCase": 160,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-game-boy-advance-weiss-ovp-anleitung-2-spiele/3565144373-227-1954"
     },
     {
       "id": "4126fd5d-7856-8054-93c8-e93309803614",
@@ -656,7 +709,8 @@
       "profit": null,
       "minimum": 115,
       "bestCase": 160,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-game-boy-advance-schwarz-pok-mon-rubin-original-/3565115726-227-1954"
     },
     {
       "id": "4126fd5d-7856-8033-a0df-e3693929c025",
@@ -668,7 +722,8 @@
       "profit": null,
       "minimum": 80,
       "bestCase": 120,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-game-boy-pocket-rot-original-kamera-schutzbox/3565181511-279-1954"
     },
     {
       "id": "4126fd5d-7856-80e9-ab14-d944a48a7dea",
@@ -680,7 +735,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 0,
-      "soldDate": null
+      "soldDate": null,
+      "link": "-"
     },
     {
       "id": "4126fd5d-7856-8036-8a68-ebd800ccda5a",
@@ -692,7 +748,8 @@
       "profit": null,
       "minimum": 250,
       "bestCase": 525,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-gamecube-dol-001-konsole-mit-verpackung-zubehoer-spiel/3553850424-279-2121?utm_source=sharesheet&utm_medium=social&utm_campaign=socialbuttons&utm_content=app_android"
     },
     {
       "id": "4126fd5d-7856-803c-89b3-d5dc1121be87",
@@ -704,7 +761,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 0,
-      "soldDate": null
+      "soldDate": null,
+      "link": "-"
     },
     {
       "id": "4126fd5d-7856-8072-bba9-ed79e822898f",
@@ -716,7 +774,8 @@
       "profit": null,
       "minimum": 45,
       "bestCase": 75,
-      "soldDate": null
+      "soldDate": null,
+      "link": "-"
     },
     {
       "id": "4126fd5d-7856-80d8-b36a-d8d35d7aa75b",
@@ -728,7 +787,8 @@
       "profit": null,
       "minimum": 100,
       "bestCase": 350,
-      "soldDate": null
+      "soldDate": null,
+      "link": "-"
     },
     {
       "id": "4126fd5d-7856-805c-8835-dd219ae1c5ab",
@@ -740,7 +800,8 @@
       "profit": null,
       "minimum": 400,
       "bestCase": 700,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-gamecube-sammlung-konsole-4-controller-8-spiele-/3564627335-279-1954"
     },
     {
       "id": "4126fd5d-7856-80fc-9f3e-c9e863faebee",
@@ -752,7 +813,8 @@
       "profit": null,
       "minimum": 90,
       "bestCase": 180,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/7-super-nintendo-snes-spiele-donkey-kong-1-3-yoshi-s-island-/3564624937-227-1954"
     },
     {
       "id": "4126fd5d-7856-8037-8c6c-f9337cd32e7e",
@@ -764,7 +826,8 @@
       "profit": null,
       "minimum": 40,
       "bestCase": 90,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-wii-spiele-sammlung-6-spiele-mario-galaxy-zelda-dk/3564623318-227-1954"
     },
     {
       "id": "4126fd5d-7856-80f4-bc4d-d3407126ebde",
@@ -776,7 +839,8 @@
       "profit": null,
       "minimum": 80,
       "bestCase": 130,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/6-nintendo-3ds-spiele-sammlung-pok-mon-x-omega-rubin-zelda-/3564621720-227-1954"
     },
     {
       "id": "4126fd5d-7856-807a-912c-ff0929028cdc",
@@ -788,7 +852,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 90,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/kirby-s-adventure-nes-nintendo-original-in-ovp/3564619074-227-1954"
     },
     {
       "id": "4126fd5d-7856-807d-b0f9-f55be0f850b9",
@@ -800,7 +865,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 30,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/mario-wird-vermisst-pc-cd-rom-deutsch-1994/3564614615-227-1954"
     },
     {
       "id": "4126fd5d-7856-8022-bb69-dbf0b17357a0",
@@ -812,7 +878,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 70,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-sound-adventures-1998-original-promo-soundtrack/3564617228-78-1954"
     },
     {
       "id": "4126fd5d-7856-802f-a71f-cefa096c96cf",
@@ -824,7 +891,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 70,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/banjo-kazooie-sueueue-baer-original-soundtrack-cd-1998/3564615919-78-1954"
     },
     {
       "id": "4126fd5d-7856-80d4-916f-d75f8726d5cf",
@@ -836,7 +904,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 70,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/lylat-wars-sound-of-lylat-original-soundtrack-cd-1997/3564612900-78-1954"
     },
     {
       "id": "4126fd5d-7856-80fc-bbd3-c93978611d46",
@@ -848,7 +917,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 70,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/super-mario-64-it-s-a-me-mario-original-soundtrack-cd-1997/3564611650-78-1954"
     },
     {
       "id": "4126fd5d-7856-809c-9f5b-cc317c937d0b",
@@ -860,7 +930,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 15,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pok-mon-soundtrack-cd-schnapp-sie-dir-alle-deutsch/3564610052-78-1954"
     },
     {
       "id": "4126fd5d-7856-8058-9bf3-e91bf3c520d1",
@@ -872,7 +943,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 70,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/donkey-kong-64-da-banana-bunch-original-soundtrack-cd-1999/3564608771-78-1954"
     },
     {
       "id": "4126fd5d-7856-8052-97fb-e14ce58385ce",
@@ -884,7 +956,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 35,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/pok-mon-gotta-catch-the-sound-nintendo-original-soundtrack-cd/3564606817-78-1954"
     },
     {
       "id": "4126fd5d-7856-8012-8500-d4cd810a90c9",
@@ -896,7 +969,8 @@
       "profit": null,
       "minimum": 20,
       "bestCase": 45,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/akai-mpk-mini-mk1-usb-midi-keyboard-controller-mit-25-tasten/3563636402-74-1954"
     },
     {
       "id": "4126fd5d-7856-8003-a02e-ebde0c97bc4f",
@@ -908,7 +982,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 30,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/behringer-bcd3000-b-control-deejay-usb-dj-controller-mit-audioi/3563635396-172-1954"
     },
     {
       "id": "4126fd5d-7856-8043-bdff-eb0e9ad269f6",
@@ -920,7 +995,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 25,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/lomography-konstruktor-35mm-analogkamera-diy-spiegelreflexkamer/3563634495-245-1954"
     },
     {
       "id": "4126fd5d-7856-8022-b319-e3c3dfc1cbef",
@@ -932,7 +1008,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 15,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/lomography-konstruktor-35mm-analogkamera-diy-spiegelreflexkamer/3563634495-245-1954"
     },
     {
       "id": "4126fd5d-7856-8001-9dad-f2379bc4ac53",
@@ -944,7 +1021,8 @@
       "profit": null,
       "minimum": 50,
       "bestCase": 150,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/2x-krk-rokit-5-rp5-g1-aktive-studiomonitore-lautsprecher-paar/3563632372-172-1954"
     },
     {
       "id": "4126fd5d-7856-802e-ada7-fdbfbc692da0",
@@ -956,7 +1034,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 30,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/venum-boxhandschuhe-schwarz-rot-kickboxen-muay-thai-boxen/3563955918-230-1954"
     },
     {
       "id": "4126fd5d-7856-801b-a700-c99299a7d2ba",
@@ -968,7 +1047,8 @@
       "profit": 40,
       "minimum": 20,
       "bestCase": 50,
-      "soldDate": "2026-11-09"
+      "soldDate": "2026-11-09",
+      "link": "https://www.kleinanzeigen.de/s-anzeige/syma-x8-pro-gps-drohne-mit-kamera-fernsteuerung/3563626728-23-1954"
     },
     {
       "id": "4126fd5d-7856-80e6-b02d-e4a2bb968863",
@@ -980,7 +1060,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 15,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/schwebender-weinflaschenhalter-aus-metallkette/3563625332-246-1954"
     },
     {
       "id": "4126fd5d-7856-801b-bb96-c3b7578624fa",
@@ -992,7 +1073,8 @@
       "profit": 30,
       "minimum": 10,
       "bestCase": 40,
-      "soldDate": "2026-11-07"
+      "soldDate": "2026-11-07",
+      "link": "https://www.kleinanzeigen.de/s-anzeige/design-beistelltisch-weiss-mit-zeitschriftenhalter-moderner-sofa/3563939385-88-1954"
     },
     {
       "id": "4126fd5d-7856-80a3-be8a-ec6fe9b5e193",
@@ -1004,7 +1086,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 30,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/katzen-kletterwand-set-mit-haengematte-kratzsaeulen-liegeflaechen/3563947610-313-1954"
     },
     {
       "id": "4126fd5d-7856-8093-b20c-d83fd87b24c0",
@@ -1016,7 +1099,8 @@
       "profit": 30,
       "minimum": 0,
       "bestCase": 40,
-      "soldDate": "2026-11-10"
+      "soldDate": "2026-11-10",
+      "link": "https://www.kleinanzeigen.de/s-anzeige/rosa-high-heel-sessel-schuhsessel-pumps-stuhl/3563942304-88-1954"
     },
     {
       "id": "4126fd5d-7856-8072-b856-d5a99edfa581",
@@ -1028,7 +1112,8 @@
       "profit": null,
       "minimum": 75,
       "bestCase": 190,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/original-stokke-move-ergonomischer-stehhocker-buche-blau/3564603614-93-1954"
     },
     {
       "id": "4126fd5d-7856-8011-95f6-dcd5d64b314c",
@@ -1040,7 +1125,8 @@
       "profit": 142,
       "minimum": 50,
       "bestCase": 150,
-      "soldDate": "2026-11-06"
+      "soldDate": "2026-11-06",
+      "link": "https://www.kleinanzeigen.de/s-anzeige/vintage-modulare-kerzenstaender-bmf-nagel-stil/3564355249-246-1954"
     },
     {
       "id": "4126fd5d-7856-80c4-9282-e6aa054b0629",
@@ -1052,7 +1138,8 @@
       "profit": null,
       "minimum": 15,
       "bestCase": 60,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/glasschildkroete-bunt-dekorative-glasfigur-im-murano-stil/3564342820-246-1954"
     },
     {
       "id": "4126fd5d-7856-8014-8ef0-e0659e2cee66",
@@ -1064,7 +1151,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 50,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/glas-couchtisch-mit-4-ebenen-glas-metall/3564338081-88-1954"
     },
     {
       "id": "4126fd5d-7856-809c-b5e4-e18b0284d637",
@@ -1076,7 +1164,8 @@
       "profit": null,
       "minimum": 50,
       "bestCase": 180,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/hoetten-echtleder-relaxsessel-schwarz-mit-liegefunktion/3564334881-88-1954"
     },
     {
       "id": "4126fd5d-7856-80d2-8723-d801dfb1abe3",
@@ -1088,7 +1177,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 15,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/shg-joghurtbereiter-elektrische-joghurtmaschine-mit-haube/3564331199-176-1954"
     },
     {
       "id": "4126fd5d-7856-80c2-b33b-f5a17a130f2e",
@@ -1100,7 +1190,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 35,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/gastroback-fast-juicer-entsafter-elektrische-saftpresse/3564328684-176-1954"
     },
     {
       "id": "4126fd5d-7856-8019-ac27-ef1925dc814a",
@@ -1112,7 +1203,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 29,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/moulinex-ovatio-3-kuechenmaschine-mit-standmixer/3563638538-176-1954"
     },
     {
       "id": "4126fd5d-7856-8087-8109-fc1c5bff527b",
@@ -1124,7 +1216,8 @@
       "profit": null,
       "minimum": 5,
       "bestCase": 18,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/moulinex-fritteuse-mit-frittierkorb-elektrische-oel-fritteuse/3563637622-176-1954"
     },
     {
       "id": "4126fd5d-7856-8035-96e1-efe7d8f3f679",
@@ -1136,7 +1229,8 @@
       "profit": null,
       "minimum": 50,
       "bestCase": 110,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/kuscheltier-loewe-mit-maehne-xxl-stofftier/3563630695-23-1954"
     },
     {
       "id": "4126fd5d-7856-80f9-9352-f351956562a7",
@@ -1148,7 +1242,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 10,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/cocktailshaker-edelstahl-klassischer-3-teiliger-barshaker/3563629544-248-1954"
     },
     {
       "id": "4126fd5d-7856-8036-86ef-fb281cd70845",
@@ -1160,7 +1255,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 9,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/3-eierbecher-mit-unterteller-silberfarbenes-metall-vintage/3563628677-86-1954"
     },
     {
       "id": "4126fd5d-7856-803a-92c3-d5b1c7600662",
@@ -1172,7 +1268,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 10,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/edelstahl-thermosflasche-mit-2-trinkbechern-isolierflasche-camp/3563627828-86-1954"
     },
     {
       "id": "4126fd5d-7856-801b-a3ce-d53658cbd853",
@@ -1184,7 +1281,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 9,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/weinflaschenhalter-aus-metall-verchromter-weinflaschenstaender/3563623855-86-1954"
     },
     {
       "id": "4126fd5d-7856-804d-a42e-e7101a2e7301",
@@ -1196,7 +1294,8 @@
       "profit": null,
       "minimum": 0,
       "bestCase": 20,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/alte-milchkanne-2-liter-aluminium-mit-deckel-vintage-landhaus-d/3563622543-86-1954"
     },
     {
       "id": "4126fd5d-7856-808c-afac-febc44d1cd01",
@@ -1208,7 +1307,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 29,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/abc-doerrgeraet-doerrautomat-mit-timer-obst-gemuese-kraeuter/3563620764-176-1954"
     },
     {
       "id": "4126fd5d-7856-805f-8048-c00c8e8ca74c",
@@ -1220,7 +1320,8 @@
       "profit": null,
       "minimum": 10,
       "bestCase": 25,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/philips-delizia-duo-eismaschine-eisbereiter-fuer-speiseeis/3563618695-176-1954"
     },
     {
       "id": "4126fd5d-7856-80ab-822e-dc07fb4278b0",
@@ -1232,7 +1333,8 @@
       "profit": null,
       "minimum": 50,
       "bestCase": 150,
-      "soldDate": null
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/ledersofa-couch-set-2er-3er-beide-zusammen-guenstig/3568422405-88-1954"
     }
   ]
 }
