@@ -65,7 +65,7 @@ jobs:
                   try: direct=datetime.fromisoformat(direct.replace('Z','+00:00')).date().isoformat()
                   except ValueError: raise ValueError('Invalid Sales Date')
               date=direct or legacy_date(txt(p['Sales Update']))
-              items.append({'id':row['id'],'name':txt(p['Item'],'title'),'status':status,'owners':owners,'profit':p['Sales Profit'].get('number'),'minimum':p['Minimum'].get('number'),'bestCase':p['Best Case'].get('number'),'soldDate':date if status=='Sold' else None})
+              items.append({'id':row['id'],'name':txt(p['Item'],'title'),'status':status,'owners':owners,'profit':p['Sales Profit'].get('number'),'minimum':p['Minimum'].get('number'),'bestCase':p['Best Case'].get('number'),'soldDate':date if status=='Sold' else None,'link':p.get('Link',{}).get('url') if p.get('Link',{}).get('type')=='url' else None})
           sold=[x for x in items if x['status']=='Sold']
           unsold=[x for x in items if x['status']!='Sold']
           if any(x['profit'] is None for x in sold): raise ValueError('Sold item missing Sales Profit')
@@ -84,12 +84,25 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/sales.json
-          if ! git diff --cached --quiet; then
+          cp data/sales.json /tmp/sales.json
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/sales.json data/sales.json
+            git add data/sales.json
+            if git diff --cached --quiet; then
+              echo "No data changes"
+              break
+            fi
             git commit -m "Update live sales data"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "Could not push after 3 attempts" >&2
+              exit 1
+            fi
+          done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
