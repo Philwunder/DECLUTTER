@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T07:51:54.194784+00:00",
+  "updatedAt": "2026-11-13T08:08:30.877846+00:00",
   "recordCount": 102,
   "soldCount": 7,
   "revenue": 337.81,
@@ -452,7 +452,7 @@
     },
     {
       "id": "4126fd5d-7856-8068-aa72-f3cb00b31c92",
-      "name": "Leap Motion",
+      "name": "Leap Motion Controller",
       "status": "Sold",
       "owners": [
         "Philipp"
