@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-14T15:22:26.637045+00:00",
+  "updatedAt": "2026-11-14T16:13:22.544551+00:00",
   "recordCount": 102,
-  "soldCount": 9,
-  "revenue": 391.12,
-  "minimumTotal": 4114.12,
-  "bestCaseTotal": 8761.12,
+  "soldCount": 10,
+  "revenue": 416.12,
+  "minimumTotal": 4129.12,
+  "bestCaseTotal": 8756.12,
   "missingEstimateCount": 0,
   "items": [
     {
@@ -1027,14 +1027,14 @@
     {
       "id": "4126fd5d-7856-802e-ada7-fdbfbc692da0",
       "name": "Thaibox Equipment",
-      "status": "Online for Sale",
+      "status": "Sold",
       "owners": [
         "Philipp"
       ],
-      "profit": null,
+      "profit": 25,
       "minimum": 10,
       "bestCase": 30,
-      "soldDate": null,
+      "soldDate": "2026-11-14",
       "link": "https://www.kleinanzeigen.de/s-anzeige/venum-boxhandschuhe-schwarz-rot-kickboxen-muay-thai-boxen/3563955918-230-1954"
     },
     {
