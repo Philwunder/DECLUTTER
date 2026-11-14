@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-14T07:58:39.776808+00:00",
+  "updatedAt": "2026-11-14T08:47:52.843621+00:00",
   "recordCount": 102,
   "soldCount": 7,
   "revenue": 337.81,
-  "minimumTotal": 4080.81,
-  "bestCaseTotal": 8762.81,
+  "minimumTotal": 4085.81,
+  "bestCaseTotal": 8766.81,
   "missingEstimateCount": 0,
   "items": [
     {
@@ -471,10 +471,10 @@
         "Philipp"
       ],
       "profit": null,
-      "minimum": 15,
-      "bestCase": 25,
+      "minimum": 20,
+      "bestCase": 29,
       "soldDate": null,
-      "link": "https://www.kleinanzeigen.de/s-anzeige/csl-mini-pc-on-a-stick-hdmi-mini-computer/3566295452-228-1954"
+      "link": "https://www.kleinanzeigen.de/s-anzeige/csl-mini-pc-on-a-stick-windows-10-wifi-hdmi/3570765957-228-1954"
     },
     {
       "id": "4126fd5d-7856-80c1-95f7-dbb87c1feb10",
