@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-14T12:14:10.439799+00:00",
+  "updatedAt": "2026-11-14T13:12:00.558965+00:00",
   "recordCount": 102,
-  "soldCount": 7,
-  "revenue": 337.81,
-  "minimumTotal": 4085.81,
-  "bestCaseTotal": 8766.81,
+  "soldCount": 9,
+  "revenue": 391.12,
+  "minimumTotal": 4114.12,
+  "bestCaseTotal": 8761.12,
   "missingEstimateCount": 0,
   "items": [
     {
@@ -466,14 +466,14 @@
     {
       "id": "4126fd5d-7856-8011-905e-c355a6502768",
       "name": "CSL Mini PC Stick",
-      "status": "Online for Sale",
+      "status": "Sold",
       "owners": [
         "Philipp"
       ],
-      "profit": null,
+      "profit": 29,
       "minimum": 20,
       "bestCase": 29,
-      "soldDate": null,
+      "soldDate": "2026-11-14",
       "link": "https://www.kleinanzeigen.de/s-anzeige/csl-mini-pc-on-a-stick-windows-10-wifi-hdmi/3570765957-228-1954"
     },
     {
@@ -975,14 +975,14 @@
     {
       "id": "4126fd5d-7856-8003-a02e-ebde0c97bc4f",
       "name": "DJ Turntables",
-      "status": "Online for Sale",
+      "status": "Sold",
       "owners": [
         "Philipp"
       ],
-      "profit": null,
+      "profit": 24.31,
       "minimum": 5,
       "bestCase": 30,
-      "soldDate": null,
+      "soldDate": "2026-11-14",
       "link": "https://www.kleinanzeigen.de/s-anzeige/behringer-bcd3000-b-control-deejay-usb-dj-controller-mit-audioi/3563635396-172-1954"
     },
     {
