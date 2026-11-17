@@ -1,25 +1,12 @@
 {
-  "updatedAt": "2026-11-17T05:58:01.473339+00:00",
-  "recordCount": 103,
+  "updatedAt": "2026-11-17T07:13:07.302992+00:00",
+  "recordCount": 102,
   "soldCount": 10,
   "revenue": 416.12,
-  "minimumTotal": 4134.12,
-  "bestCaseTotal": 8771.12,
+  "minimumTotal": 4129.12,
+  "bestCaseTotal": 8756.12,
   "missingEstimateCount": 0,
   "items": [
-    {
-      "id": "41a6fd5d-7856-806e-9b7b-def65e76435e",
-      "name": "Fackelmann Korkenzieher",
-      "status": "Online for Sale",
-      "owners": [
-        "Family"
-      ],
-      "profit": null,
-      "minimum": 5,
-      "bestCase": 15,
-      "soldDate": null,
-      "link": "https://www.kleinanzeigen.de/s-anzeige/fackelmann-korkenzieher-set-ovp/3573662303-86-1954?utm_source=sharesheet&utm_medium=social&utm_campaign=socialbuttons&utm_content=app_android"
-    },
     {
       "id": "4166fd5d-7856-8031-9926-e8ba097181c4",
       "name": "Desktop PC",
