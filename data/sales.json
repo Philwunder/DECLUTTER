@@ -1,12 +1,25 @@
 {
-  "updatedAt": "2026-11-18T20:17:04.409175+00:00",
-  "recordCount": 102,
-  "soldCount": 10,
-  "revenue": 416.12,
-  "minimumTotal": 4129.12,
-  "bestCaseTotal": 8756.12,
+  "updatedAt": "2026-11-18T21:09:31.621389+00:00",
+  "recordCount": 103,
+  "soldCount": 11,
+  "revenue": 480.12,
+  "minimumTotal": 4165.12,
+  "bestCaseTotal": 8748.12,
   "missingEstimateCount": 0,
   "items": [
+    {
+      "id": "41c6fd5d-7856-8090-820d-e0170ec2dc24",
+      "name": "Nintendo Wii Spiel - Smash Bros. Brawl",
+      "status": "Online for Sale",
+      "owners": [
+        "Philipp"
+      ],
+      "profit": null,
+      "minimum": 12,
+      "bestCase": 18,
+      "soldDate": null,
+      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-wii-spiele-sammlung-6-spiele-mario-galaxy-zelda-dk/3564623318-227-1954"
+    },
     {
       "id": "4166fd5d-7856-8031-9926-e8ba097181c4",
       "name": "Desktop PC",
@@ -323,7 +336,7 @@
     {
       "id": "4136fd5d-7856-8019-b0c2-e28f1a1e3126",
       "name": "Kasperle Theater, Holz",
-      "status": "Online for Sale",
+      "status": "Given Away",
       "owners": [
         "Philipp"
       ],
@@ -818,16 +831,16 @@
     },
     {
       "id": "4126fd5d-7856-8037-8c6c-f9337cd32e7e",
-      "name": "Nintendo Wii Spiele, 6x",
-      "status": "Online for Sale",
+      "name": "Nintendo Wii Spiele, 5x",
+      "status": "Sold",
       "owners": [
         "Philipp"
       ],
-      "profit": null,
+      "profit": 64,
       "minimum": 40,
       "bestCase": 90,
-      "soldDate": null,
-      "link": "https://www.kleinanzeigen.de/s-anzeige/nintendo-wii-spiele-sammlung-6-spiele-mario-galaxy-zelda-dk/3564623318-227-1954"
+      "soldDate": "2026-11-18",
+      "link": null
     },
     {
       "id": "4126fd5d-7856-80f4-bc4d-d3407126ebde",
