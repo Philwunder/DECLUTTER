@@ -66,8 +66,11 @@ jobs:
                   except ValueError: raise ValueError('Invalid Sales Date')
               date=direct or legacy_date(txt(p['Sales Update']))
               items.append({'id':row['id'],'name':txt(p['Item'],'title'),'status':status,'owners':owners,'profit':p['Sales Profit'].get('number'),'minimum':p['Minimum'].get('number'),'bestCase':p['Best Case'].get('number'),'soldDate':date if status=='Sold' else None,'link':p.get('Link',{}).get('url') if p.get('Link',{}).get('type')=='url' else None})
+          # Excluded items remain visible in the inventory but contribute zero to finances.
+          excluded_statuses={'Given Away','Disposed'}
+          excluded=[x for x in items if x['status'] in excluded_statuses]
           sold=[x for x in items if x['status']=='Sold']
-          unsold=[x for x in items if x['status']!='Sold']
+          unsold=[x for x in items if x['status'] not in excluded_statuses and x['status']!='Sold']
           if any(x['profit'] is None for x in sold): raise ValueError('Sold item missing Sales Profit')
           if any(not x['owners'] for x in sold+unsold): raise ValueError('Active item missing Owner')
           if any(x['minimum'] is not None and x['bestCase'] is not None and x['minimum']>x['bestCase'] for x in unsold): raise ValueError('Minimum exceeds Best Case')
