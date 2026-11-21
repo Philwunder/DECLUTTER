@@ -1,10 +1,11 @@
 {
-  "updatedAt": "2026-11-21T12:30:14.816330+00:00",
+  "updatedAt": "2026-11-21T13:35:54.973580+00:00",
   "recordCount": 103,
   "soldCount": 11,
+  "excludedCount": 2,
   "revenue": 480.12,
-  "minimumTotal": 4165.12,
-  "bestCaseTotal": 8748.12,
+  "minimumTotal": 3290.12,
+  "bestCaseTotal": 7069.12,
   "missingEstimateCount": 0,
   "items": [
     {
