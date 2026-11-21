@@ -69,16 +69,16 @@ jobs:
           sold=[x for x in items if x['status']=='Sold']
           unsold=[x for x in items if x['status']!='Sold']
           if any(x['profit'] is None for x in sold): raise ValueError('Sold item missing Sales Profit')
-          if any(not x['owners'] for x in items): raise ValueError('Item missing Owner')
+          if any(not x['owners'] for x in sold+unsold): raise ValueError('Active item missing Owner')
           if any(x['minimum'] is not None and x['bestCase'] is not None and x['minimum']>x['bestCase'] for x in unsold): raise ValueError('Minimum exceeds Best Case')
           def num(v): return v if v is not None else 0
           revenue=sum(num(x['profit']) for x in sold)
           minimum=revenue+sum(num(x['minimum']) for x in unsold)
           best=revenue+sum(num(x['bestCase']) for x in unsold)
-          payload={'updatedAt':datetime.now(timezone.utc).isoformat(),'recordCount':len(items),'soldCount':len(sold),'revenue':round(revenue,2),'minimumTotal':round(minimum,2),'bestCaseTotal':round(best,2),'missingEstimateCount':sum(x['minimum'] is None or x['bestCase'] is None for x in unsold),'items':items}
+          payload={'updatedAt':datetime.now(timezone.utc).isoformat(),'recordCount':len(items),'soldCount':len(sold),'excludedCount':len(excluded),'revenue':round(revenue,2),'minimumTotal':round(minimum,2),'bestCaseTotal':round(best,2),'missingEstimateCount':sum(x['minimum'] is None or x['bestCase'] is None for x in unsold),'items':items}
           os.makedirs('data',exist_ok=True)
           with open('data/sales.json','w',encoding='utf-8') as f: json.dump(payload,f,ensure_ascii=False,indent=2)
-          print('Records:',len(items),'Sold:',len(sold),'Revenue:',round(revenue,2),'Sold without date:',sum(x['soldDate'] is None for x in sold))
+          print('Records:',len(items),'Sold:',len(sold),'Revenue:',round(revenue,2),'Excluded:',len(excluded),'Sold without date:',sum(x['soldDate'] is None for x in sold))
           PY
       - name: Commit data to repository
         run: |
