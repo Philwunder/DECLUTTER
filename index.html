@@ -64,7 +64,11 @@ body.revealing .sale-flash{height:auto!important;min-height:190px!important;marg
 @media(max-width:760px){.realized-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.realized-kpis .realized-kpi{flex-direction:column;align-items:flex-start}.realized-kpis .realized-kpi span{text-align:left;max-width:100%}}
 @media(max-width:430px){.realized-kpis{grid-template-columns:1fr}.realized-kpis .realized-kpi{flex-direction:row;align-items:center;justify-content:space-between}.realized-kpis .realized-kpi span{text-align:right}}
 @media(prefers-reduced-motion:reduce){.pixel-dot{animation:none}}
-</style></head><body><div id="sparkles"></div><div class="wrap"><header class="top"><div class="kicker">Aufräumen und Entrümpeln für den...</div><h1>WUNDERLICH JACKPOT</h1></header><section class="panel hero"><div class="reward" aria-hidden="true"><span class="goldcoin">🪙</span><span class="goldcoin">🪙</span><span class="goldcoin">🪙</span></div><h2>FAMILY JACKPOT</h2><div class="amount" id="master" aria-live="polite">??? / 585 €</div><div class="milestone">Etappenziel: Black Friday</div><div class="track" role="progressbar" aria-label="Verkaufsfortschritt" aria-valuemin="0" aria-valuemax="585" aria-valuenow="0" id="progress"><div class="fill" id="masterfill"></div></div><div class="line" id="progressLabels" hidden><span id="percent"></span><span id="remaining"></span></div><div class="sale-flash" id="saleFlash" aria-live="off"></div><button class="btn" id="reveal" type="button" onclick="window.startJackpotReveal && window.startJackpotReveal()">JACKPOT ENTHÜLLEN</button><div class="hint" id="moment">Klicke, um die Verkaufserfolge zu sehen</div></section><div id="postReveal" class="post-reveal" hidden><div class="stats"><div class="stat"><b id="sold">–</b><span>VERKAUFT</span></div><div class="stat"><b id="online">–</b><span>ONLINE</span></div><div class="stat"><b id="potential">–</b><span>GEGENSTÄNDE GESAMT</span></div></div><section class="panel"><h3>✦ Verkaufserlöse bis Black Friday</h3><div class="chartbox" id="timeline"></div><div class="chartlegend" id="chartnote"></div></section><div class="grid"><section class="panel"><h3>Verkaufserlöse nach Person</h3><p class="muted small">Vergleich der Erlöse nach Person. Gemeinsam benannte Eigentümer werden anteilig berücksichtigt; „Family“ bleibt eine eigene Kategorie.</p><div id="owners"></div></section><section class="panel"><h3>💰 Geld eingesammelt</h3><div class="collected-kpi"><span>GESAMTERLÖS</span><strong id="collectedTotal">–</strong></div><div class="sort-controls" id="saleSortControls" aria-label="Verkäufe sortieren"><button type="button" data-sort="amount">Betrag ↓</button><button type="button" data-sort="date" class="selected">Datum ↓</button><button type="button" data-sort="name">Alphabetisch A–Z</button></div><div id="soldlist"></div></section></div><section class="panel"><h3>✦ Verkaufspotenzial nach Person</h3><p class="muted small">Ist-Erlöse und verbleibendes Verkaufspotenzial, aufgeteilt nach Personen.</p><div id="realizedKpi"></div><div class="chartbox" id="potentialChart"></div><div class="chartlegend" id="potentialLegend"></div></section><section class="panel"><h3>🪙 Schatzinventar <span class="pill" id="count"></span></h3><div class="controls"><input id="search" placeholder="Gegenstand suchen" aria-label="Suche"><select id="ownerfilter" aria-label="Owner"><option value="">Alle Owner</option></select><select id="statusfilter" aria-label="Status"><option value="">Alle Status</option><option value="Sold">Verkauft</option><option value="Online for Sale">Online</option><option value="Not Started">Offen</option></select></div><div class="tablewrap"><table><thead><tr><th>Gegenstand</th><th>Owner / Status</th><th>Wert</th></tr></thead><tbody id="inventory"></tbody></table></div></section><section class="panel"><h3>✧ Spielregeln und Datenstand</h3><p class="muted small">Die Verkaufserlöse werden nach Absprache zum guten Zweck für die Familie verteilt. Habt Spaß und macht mit!</p><p class="muted small">Letzte Aktualisierung: wird geladen</p><p class="muted small">Dashboard-Version: 20 · Live-Sync</p></section><div class="footer">✦ SELL · COLLECT · UNLOCK THE REWARD ✦</div></div></div><div id="prizeOverlay" class="prize-overlay" hidden role="dialog" aria-modal="true" aria-label="Jackpot gewonnen"><div class="prize-modal"><div class="prize-top">✦ JACKPOT GEKNACKT ✦</div><h2>CONGRATULATIONS!</h2><p>Das Familienziel ist erreicht.</p><button id="prizeBox" class="prize-box" type="button" aria-label="Geschenk öffnen"><span class="prize-lid"></span><span class="prize-body">✦</span></button><div id="prizeResult" hidden><div class="switch-console"><span class="joycon left">●<small>●</small></span><span class="switch-screen">SWITCH <b>2</b></span><span class="joycon right">●<small>●</small></span></div><h3>NINTENDO SWITCH 2</h3><p>Family Jackpot unlocked!</p></div><p id="prizeHint">Tippe auf das Geschenk</p><button id="prizeClose" class="btn" type="button">SCHLIESSEN</button></div></div><script>let items=[];
+
+.skip-button{display:inline-block;margin:12px 0 0 10px;font-size:13px;padding:10px 15px;min-height:42px;border:1px solid #caa15d;border-radius:12px;color:#ffe8b4;background:#211829;cursor:pointer;box-shadow:0 0 12px #b98b3e44;touch-action:manipulation}
+.skip-button[hidden]{display:none!important}
+@media(max-width:680px){.skip-button{display:block;margin:12px auto 0}}
+</style></head><body><div id="sparkles"></div><div class="wrap"><header class="top"><div class="kicker">Aufräumen und Entrümpeln für den...</div><h1>WUNDERLICH JACKPOT</h1></header><section class="panel hero"><div class="reward" aria-hidden="true"><span class="goldcoin">🪙</span><span class="goldcoin">🪙</span><span class="goldcoin">🪙</span></div><h2>FAMILY JACKPOT</h2><div class="amount" id="master" aria-live="polite">??? / 585 €</div><div class="milestone" id="milestoneLabel">Etappenziel: Black Friday</div><div class="track" role="progressbar" aria-label="Verkaufsfortschritt" aria-valuemin="0" aria-valuemax="585" aria-valuenow="0" id="progress"><div class="fill" id="masterfill"></div></div><div class="line" id="progressLabels" hidden><span id="percent"></span><span id="remaining"></span></div><div class="sale-flash" id="saleFlash" aria-live="off"></div><button class="btn" id="reveal" type="button" onclick="window.startJackpotReveal && window.startJackpotReveal()">JACKPOT ENTHÜLLEN</button><button class="btn skip-button" id="skipReveal" type="button" hidden>Animation überspringen »</button><div class="hint" id="moment">Klicke, um die Verkaufserfolge zu sehen</div></section><div id="postReveal" class="post-reveal" hidden><div class="stats"><div class="stat"><b id="sold">–</b><span>VERKAUFT</span></div><div class="stat"><b id="online">–</b><span>ONLINE</span></div><div class="stat"><b id="potential">–</b><span>GEGENSTÄNDE GESAMT</span></div></div><section class="panel"><h3>✦ Verkaufserlöse und Etappenziele</h3><div class="chartbox" id="timeline"></div><div class="chartlegend" id="chartnote"></div></section><div class="grid"><section class="panel"><h3>Verkaufserlöse nach Person</h3><p class="muted small">Vergleich der Erlöse nach Person. Gemeinsam benannte Eigentümer werden anteilig berücksichtigt; „Family“ bleibt eine eigene Kategorie.</p><div id="owners"></div></section><section class="panel"><h3>💰 Geld eingesammelt</h3><div class="collected-kpi"><span>GESAMTERLÖS</span><strong id="collectedTotal">–</strong></div><div class="sort-controls" id="saleSortControls" aria-label="Verkäufe sortieren"><button type="button" data-sort="amount">Betrag ↓</button><button type="button" data-sort="date" class="selected">Datum ↓</button><button type="button" data-sort="name">Alphabetisch A–Z</button></div><div id="soldlist"></div></section></div><section class="panel"><h3>✦ Verkaufspotenzial nach Person</h3><p class="muted small">Ist-Erlöse und verbleibendes Verkaufspotenzial, aufgeteilt nach Personen.</p><div id="realizedKpi"></div><div class="chartbox" id="potentialChart"></div><div class="chartlegend" id="potentialLegend"></div></section><section class="panel"><h3>🪙 Schatzinventar <span class="pill" id="count"></span></h3><div class="controls"><input id="search" placeholder="Gegenstand suchen" aria-label="Suche"><select id="ownerfilter" aria-label="Owner"><option value="">Alle Owner</option></select><select id="statusfilter" aria-label="Status"><option value="">Alle Status</option><option value="Sold">Verkauft</option><option value="Online for Sale">Online</option><option value="Not Started">Offen</option><option value="Given Away">Verschenkt</option><option value="Disposed">Entsorgt</option></select></div><div class="tablewrap"><table><thead><tr><th>Gegenstand</th><th>Owner / Status</th><th>Wert</th></tr></thead><tbody id="inventory"></tbody></table></div></section><section class="panel"><h3>✧ Spielregeln und Datenstand</h3><p class="muted small">Die Verkaufserlöse werden nach Absprache zum guten Zweck für die Familie verteilt. Habt Spaß und macht mit!</p><p class="muted small">Letzte Aktualisierung: wird geladen</p><p class="muted small">Dashboard-Version: 22 · Live-Sync</p></section><div class="footer">✦ SELL · COLLECT · UNLOCK THE REWARD ✦</div></div></div><div id="prizeOverlay" class="prize-overlay" hidden role="dialog" aria-modal="true" aria-label="Jackpot gewonnen"><div class="prize-modal"><div class="prize-top">✦ JACKPOT GEKNACKT ✦</div><h2>CONGRATULATIONS!</h2><p>Das Familienziel ist erreicht.</p><button id="prizeBox" class="prize-box" type="button" aria-label="Geschenk öffnen"><span class="prize-lid"></span><span class="prize-body">✦</span></button><div id="prizeResult" hidden><div class="switch-console"><span class="joycon left">●<small>●</small></span><span class="switch-screen">SWITCH <b>2</b></span><span class="joycon right">●<small>●</small></span></div><h3>NINTENDO SWITCH 2</h3><p>Family Jackpot unlocked!</p></div><p id="prizeHint">Tippe auf das Geschenk</p><button id="prizeClose" class="btn" type="button">SCHLIESSEN</button></div></div><script>let items=[];
 let liveUpdatedAt=null;
 async function loadLiveDashboard(){
  const button=document.getElementById('reveal');
@@ -79,8 +83,8 @@ async function loadLiveDashboard(){
    owner:Array.isArray(x.owners)?x.owners.join(', '):'',
    status:String(x.status||''),
    profit:Number(x.profit??0),
-   best:Number(x.bestCase??0),
-   minimum:Number(x.minimum??0),
+   best:x.bestCase==null?null:Number(x.bestCase),
+   minimum:x.minimum==null?null:Number(x.minimum),
    link:typeof x.link==='string' && (x.link.startsWith('https://')||x.link.startsWith('http://'))?x.link:'',date:x.soldDate||null
   }));
   liveUpdatedAt=data.updatedAt||null;
@@ -104,8 +108,24 @@ function showJackpotPrize(){
 }
 function winPrizeFanfare(){try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const ctx=new C();ctx.resume();[523,659,784,1047,1319].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime+i*.14;o.type='triangle';o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.11,t+.025);g.gain.exponentialRampToValueAtTime(.0001,t+.35);o.connect(g).connect(ctx.destination);o.start(t);o.stop(t+.36);});setTimeout(()=>ctx.close(),2200);}catch(e){}}
 function coinsForPrize(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;for(let i=0;i<70;i++){const c=document.createElement('span');c.className='coin';c.textContent='✦';c.style.left=Math.random()*100+'vw';c.style.setProperty('--dx',(Math.random()*320-160)+'px');c.style.setProperty('--dur',(1.5+Math.random()*2)+'s');document.body.append(c);setTimeout(()=>c.remove(),4000);}}
+const EXCLUDED_STATUSES=new Set(['Given Away','Disposed']);
+const MILESTONES=[
+ {goal:585,date:'2026-11-27',label:'Black Friday 2026'},
+ {goal:1000,date:'2026-12-31',label:'Silvester 2026'},
+ {goal:2000,date:'2027-06-30',label:'30. Juni 2027'}
+];
+function milestoneSelection(total){
+ const idx=MILESTONES.findIndex(s=>total<s.goal);
+ if(idx===-1)return {current:MILESTONES[2],visible:[MILESTONES[2]],completed:true};
+ return {current:MILESTONES[idx],visible:idx===0?[MILESTONES[0]]:[MILESTONES[idx-1],MILESTONES[idx]],completed:false};
+}
 function startDashboard(){
-const goal=585;const eur=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const sold=items.filter(x=>x.status==='Sold');const total=sold.reduce((s,x)=>s+x.profit,0);const dated=sold.filter(x=>x.date).sort((a,b)=>a.date.localeCompare(b.date));const undated=sold.filter(x=>!x.date);const datedTotal=dated.reduce((s,x)=>s+x.profit,0);const undatedTotal=total-datedTotal;const fmtDate=s=>s?new Date(s+'T12:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'long'}):'Datum unbekannt';document.getElementById('sold').textContent=sold.length;document.getElementById('online').textContent=items.filter(x=>x.status==='Online for Sale').length;document.getElementById('potential').textContent=items.length;function progress(n){document.getElementById('master').textContent=eur(n)+' / '+eur(goal);document.getElementById('masterfill').style.width=Math.min(100,100*n/goal)+'%';document.getElementById('progress').setAttribute('aria-valuenow',n.toFixed(0));document.getElementById('percent').textContent=(100*n/goal).toLocaleString('de-DE',{maximumFractionDigits:1})+' % GESCHAFFT';document.getElementById('remaining').textContent=eur(Math.max(0,goal-n))+' FEHLEN'}function coins(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;for(let i=0;i<65;i++){let e=document.createElement('span');e.className='coin';e.textContent='✦';e.style.left=Math.random()*100+'vw';e.style.setProperty('--dx',(Math.random()*300-150)+'px');e.style.setProperty('--dur',(1.5+Math.random()*2.5)+'s');document.body.append(e);setTimeout(()=>e.remove(),4300)}}const btn=document.getElementById('reveal');
+const activeItems=items.filter(x=>!EXCLUDED_STATUSES.has(x.status));
+const sold=activeItems.filter(x=>x.status==='Sold');
+const total=sold.reduce((s,x)=>s+x.profit,0);
+const stage=milestoneSelection(total),goal=stage.current.goal;
+document.getElementById('milestoneLabel').textContent='Etappenziel: '+stage.current.label;
+document.getElementById('progress').setAttribute('aria-valuemax',String(goal));const eur=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dated=sold.filter(x=>x.date).sort((a,b)=>a.date.localeCompare(b.date));const undated=sold.filter(x=>!x.date);const datedTotal=dated.reduce((s,x)=>s+x.profit,0);const undatedTotal=total-datedTotal;const fmtDate=s=>s?new Date(s+'T12:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'long'}):'Datum unbekannt';document.getElementById('sold').textContent=sold.length;document.getElementById('online').textContent=items.filter(x=>x.status==='Online for Sale').length;document.getElementById('potential').textContent=items.length;function progress(n){document.getElementById('master').textContent=eur(n)+' / '+eur(goal);document.getElementById('masterfill').style.width=Math.min(100,100*n/goal)+'%';document.getElementById('progress').setAttribute('aria-valuenow',n.toFixed(0));document.getElementById('percent').textContent=(100*n/goal).toLocaleString('de-DE',{maximumFractionDigits:1})+' % GESCHAFFT';document.getElementById('remaining').textContent=eur(Math.max(0,goal-n))+' FEHLEN'}function coins(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;for(let i=0;i<65;i++){let e=document.createElement('span');e.className='coin';e.textContent='✦';e.style.left=Math.random()*100+'vw';e.style.setProperty('--dx',(Math.random()*300-150)+'px');e.style.setProperty('--dur',(1.5+Math.random()*2.5)+'s');document.body.append(e);setTimeout(()=>e.remove(),4300)}}const btn=document.getElementById('reveal');
 // Original synthesized coin-shower audio; no external audio files.
 let soundContext=null;
 function initSound(){try{const C=window.AudioContext||window.webkitAudioContext;if(C){soundContext=new C();const p=soundContext.resume();if(p&&p.catch)p.catch(()=>{});}}catch(e){}}
@@ -203,15 +223,15 @@ window.startJackpotReveal=function(){
  const slot=duration/Math.max(1,count),burst=Math.max(300,slot*.84);
  let running=0,finished=false;
  fill.style.transition='none';progress(0);
- function finish(){if(finished)return;finished=true;stopJackpotMusic();fill.style.transition='none';progress(total);flash.classList.remove('active');flash.replaceChildren();moment.textContent='';document.body.classList.remove('revealing');btn.textContent=total/goal>=1?'Congratulations!!!':total/goal>=.8?'Almost There!!':total/goal>=.6?'Keep Going!':total/goal>=.4?'Good Job!':total/goal>=.2?"It's a Start":'Keep Selling!';btn.hidden=false;btn.disabled=true;detail.hidden=false;requestAnimationFrame(()=>detail.classList.add('visible'));winSound();coins();if(total>=goal)showJackpotPrize();window.jackpotBusy=false;}
+ function finish(skipped=false){if(finished)return;finished=true;skip.hidden=true;skip.onclick=null;stopJackpotMusic();fill.style.transition='none';progress(total);flash.classList.remove('active');flash.replaceChildren();moment.textContent='';document.body.classList.remove('revealing');btn.textContent=total/goal>=1?'Congratulations!!!':total/goal>=.8?'Almost There!!':total/goal>=.6?'Keep Going!':total/goal>=.4?'Good Job!':total/goal>=.2?"It's a Start":'Keep Selling!';btn.hidden=false;btn.disabled=true;detail.hidden=false;requestAnimationFrame(()=>detail.classList.add('visible'));winSound();coins();if(total>=585)showJackpotPrize();window.jackpotBusy=false;}
  function tick(i){
-  if(i>=count){finish();return;}
+  if(finished)return;if(i>=count){finish();return;}
   const ev=events[i];running+=ev.amount;
   const date=document.createElement('div');date.className='sale-date';date.textContent=ev.date?fmtDate(ev.date):'Ohne Verkaufsdatum';
   const label=document.createElement('div');label.className='sale-name';label.textContent=ev.label;
   const amount=document.createElement('div');amount.className='sale-amount';amount.textContent='+'+eur(ev.amount);amount.style.animation='none';void amount.offsetWidth;amount.style.animation='payoutPop '+Math.min(1300,slot*.75)+'ms cubic-bezier(.18,.8,.2,1) both';
   flash.classList.remove('active','pixel-dissolve');flash.replaceChildren(date,label,amount);void flash.offsetWidth;flash.classList.add('active');
-  setTimeout(()=>{if(flash.contains(label))pixelDissolve(label,flash);},Math.max(260,slot*.60));
+  setTimeout(()=>{if(!finished&&flash.contains(label))pixelDissolve(label,flash);},Math.max(260,slot*.60));
   // Fast incremental jump followed by a hold so the contribution is legible.
   fill.style.transition='width '+burst+'ms linear';progress(running);
   // The accompanying melody runs continuously rather than only at sale events.
@@ -219,7 +239,7 @@ window.startJackpotReveal=function(){
  }
  setTimeout(()=>{requestAnimationFrame(()=>requestAnimationFrame(()=>tick(0)));},1500);
 };
-for(let i=0;i<(matchMedia('(max-width:680px)').matches?105:320);i++){let e=document.createElement('span');e.className='spark';e.textContent='✦';e.style.left=Math.random()*100+'%';e.style.top=Math.random()*100+'%';e.style.fontSize=(1.5+Math.random()*3.3)+'px';e.style.animationDelay=(-Math.random()*4)+'s';e.style.setProperty('--t',(.25+Math.random()*.9)+'s');document.getElementById('sparkles').append(e)}const ownerLabel=n=>({Mama:"Ulrike",Papa:"Diethelm"}[n]||n);const owners={};for(const x of items){for(const o of x.owner.split(',').map(y=>y.trim()).filter(Boolean)){owners[o]??={sales:0,count:0};owners[o].count++}}for(const x of sold){let names=x.owner.split(',').map(y=>y.trim()).filter(Boolean);for(const name of names)owners[name].sales+=x.profit/names.length}const sorted=Object.entries(owners).sort((a,b)=>b[1].sales-a[1].sales);const max=Math.max(1,...sorted.map(x=>x[1].sales));document.getElementById('owners').innerHTML=sorted.map(([name,v],i)=>'<div class="owner"><div class="ownerhead"><span>'+(i===0?'✦ ':'')+esc(ownerLabel(name))+'</span><span>'+eur(v.sales)+'</span></div><div class="bar"><div style="width:'+(100*v.sales/max)+'%"></div></div><small>'+v.count+' Artikel im Inventar</small></div>').join('');document.getElementById('collectedTotal').textContent=eur(total);
+for(let i=0;i<(matchMedia('(max-width:680px)').matches?105:320);i++){let e=document.createElement('span');e.className='spark';e.textContent='✦';e.style.left=Math.random()*100+'%';e.style.top=Math.random()*100+'%';e.style.fontSize=(1.5+Math.random()*3.3)+'px';e.style.animationDelay=(-Math.random()*4)+'s';e.style.setProperty('--t',(.25+Math.random()*.9)+'s');document.getElementById('sparkles').append(e)}const ownerLabel=n=>({Mama:"Ulrike",Papa:"Diethelm"}[n]||n);const owners={};for(const x of activeItems){for(const o of x.owner.split(',').map(y=>y.trim()).filter(Boolean)){owners[o]??={sales:0,count:0};owners[o].count++}}for(const x of sold){let names=x.owner.split(',').map(y=>y.trim()).filter(Boolean);for(const name of names)owners[name].sales+=x.profit/names.length}const sorted=Object.entries(owners).sort((a,b)=>b[1].sales-a[1].sales);const max=Math.max(1,...sorted.map(x=>x[1].sales));document.getElementById('owners').innerHTML=sorted.map(([name,v],i)=>'<div class="owner"><div class="ownerhead"><span>'+(i===0?'✦ ':'')+esc(ownerLabel(name))+'</span><span>'+eur(v.sales)+'</span></div><div class="bar"><div style="width:'+(100*v.sales/max)+'%"></div></div><small>'+v.count+' Artikel im Inventar</small></div>').join('');document.getElementById('collectedTotal').textContent=eur(total);
 let saleSortKey='date',saleSortDescending=true;
 function renderSoldList(){
  const collator=new Intl.Collator('de',{sensitivity:'base',numeric:true});
@@ -242,49 +262,57 @@ document.querySelectorAll('#saleSortControls button').forEach(b=>b.addEventListe
  if(saleSortKey===b.dataset.sort)saleSortDescending=!saleSortDescending;
  else {saleSortKey=b.dataset.sort;saleSortDescending=saleSortKey!=='name';}
  renderSoldList();
-}));renderSoldList();const unique=[...new Set(items.flatMap(x=>x.owner.split(',').map(y=>y.trim())))].sort();document.getElementById('ownerfilter').innerHTML+=unique.map(x=>'<option value="'+esc(x)+'">'+esc(ownerLabel(x))+'</option>').join('');function render(){const q=document.getElementById('search').value.toLowerCase(),o=document.getElementById('ownerfilter').value,s=document.getElementById('statusfilter').value;let filtered=items.filter(x=>x.name.toLowerCase().includes(q)&&(!o||x.owner.split(',').map(z=>z.trim()).includes(o))&&(!s||x.status===s));document.getElementById('count').textContent=filtered.length+' Artikel';document.getElementById('inventory').innerHTML=filtered.map(x=>'<tr><td>'+(x.link?'<a target="_blank" rel="noopener" href="'+esc(x.link)+'">'+esc(x.name)+'</a>':esc(x.name))+'</td><td><div class="inv-owner">'+esc(x.owner)+'</div><div class="inv-status">'+(x.status==='Sold'?'✓ Verkauft':x.status==='Online for Sale'?'● Online':'○ Offen')+'</div></td><td>'+(x.status==='Sold'?'<strong class="inventory-payout">+'+eur(x.profit)+'</strong>':'<b>'+(x.minimum==null&&x.best==null?'Keine Schätzung':(x.minimum==null?'?':new Intl.NumberFormat('de-DE',{maximumFractionDigits:0}).format(x.minimum))+'-'+(x.best==null?'?':new Intl.NumberFormat('de-DE',{maximumFractionDigits:0}).format(x.best))+' €')+'</b>')+'</td></tr>').join('')}for(const id of ['search','ownerfilter','statusfilter'])document.getElementById(id).addEventListener('input',render);render();function timeline(){
- const begin='2026-11-06',deadline='2026-11-27';
- const today=new Date().toLocaleDateString('en-CA',{timeZone:'Europe/Berlin'});
- const cutoff=today<begin?begin:(today<deadline?today:deadline);
- const W=900,H=370,L=66,R=30,T=30,B=63;
- const ts=d=>Date.parse(d+'T12:00:00Z');
- const x=d=>L+(ts(d)-ts(begin))/(ts(deadline)-ts(begin))*(W-L-R);
- const maxY=Math.max(goal,Math.ceil(total/100)*100);
- const y=v=>H-B-v/maxY*(H-T-B);
- const ownerNames=[...new Set(items.flatMap(e=>e.owner.split(',').map(z=>z.trim()).filter(Boolean)))].sort();
- const palette=['#f1c56e','#b57d36','#ffe3a1','#c99d5d','#80602d','#e5b977','#a68b61'];
- const ownerColors=Object.fromEntries(ownerNames.map((n,i)=>[n,palette[i%palette.length]]));
- const eventDates=[...new Set(dated.filter(e=>e.date<=cutoff).map(e=>e.date))].sort();
- const sums=Object.fromEntries(ownerNames.map(n=>[n,0]));
- const layers=ownerNames.map(n=>({name:n,points:[{date:begin,low:0,high:0}]}));
- for(const date of eventDates){
-  for(const e of dated.filter(e=>e.date===date)){
-   const ns=e.owner.split(',').map(z=>z.trim()).filter(Boolean);
-   for(const n of ns)sums[n]+=e.profit/ns.length;
+}));renderSoldList();const unique=[...new Set(items.flatMap(x=>x.owner.split(',').map(y=>y.trim())))].sort();document.getElementById('ownerfilter').innerHTML+=unique.map(x=>'<option value="'+esc(x)+'">'+esc(ownerLabel(x))+'</option>').join('');function render(){const q=document.getElementById('search').value.toLowerCase(),o=document.getElementById('ownerfilter').value,s=document.getElementById('statusfilter').value;let filtered=items.filter(x=>x.name.toLowerCase().includes(q)&&(!o||x.owner.split(',').map(z=>z.trim()).includes(o))&&(!s||x.status===s));document.getElementById('count').textContent=filtered.length+' Artikel';document.getElementById('inventory').innerHTML=filtered.map(x=>'<tr><td>'+(x.link?'<a target="_blank" rel="noopener" href="'+esc(x.link)+'">'+esc(x.name)+'</a>':esc(x.name))+'</td><td><div class="inv-owner">'+esc(x.owner)+'</div><div class="inv-status">'+(x.status==='Sold'?'✓ Verkauft':x.status==='Online for Sale'?'● Online':x.status==='Given Away'?'◇ Verschenkt':x.status==='Disposed'?'× Entsorgt':'○ Offen')+'</div></td><td>'+(x.status==='Sold'?'<strong class="inventory-payout">+'+eur(x.profit)+'</strong>':EXCLUDED_STATUSES.has(x.status)?'<span class="muted">Nicht berücksichtigt</span>':'<b>'+(x.minimum==null&&x.best==null?'Keine Schätzung':(x.minimum==null?'?':new Intl.NumberFormat('de-DE',{maximumFractionDigits:0}).format(x.minimum))+'-'+(x.best==null?'?':new Intl.NumberFormat('de-DE',{maximumFractionDigits:0}).format(x.best))+' €')+'</b>')+'</td></tr>').join('')}for(const id of ['search','ownerfilter','statusfilter'])document.getElementById(id).addEventListener('input',render);render();function timeline(){
+  const begin='2026-11-06';
+  const stages=stage.visible;
+  const deadline=stages[stages.length-1].date;
+  const today=new Date().toLocaleDateString('en-CA',{timeZone:'Europe/Berlin'});
+  const cutoff=today<begin?begin:(today<deadline?today:deadline);
+  const W=900,H=385,L=72,R=40,T=34,B=74;
+  const ts=d=>Date.parse(d+'T12:00:00Z');
+  const x=d=>L+(ts(d)-ts(begin))/(ts(deadline)-ts(begin))*(W-L-R);
+  const maxY=Math.max(total,stages[stages.length-1].goal,1)*1.12;
+  const y=v=>H-B-v/maxY*(H-T-B);
+  const ownerNames=[...new Set(activeItems.flatMap(e=>e.owner.split(',').map(z=>z.trim()).filter(Boolean)))].sort();
+  const palette=['#f1c56e','#b57d36','#ffe3a1','#c99d5d','#80602d','#e5b977','#a68b61'];
+  const colors=Object.fromEntries(ownerNames.map((n,i)=>[n,palette[i%palette.length]]));
+  const eventDates=[...new Set(dated.filter(e=>e.date>=begin&&e.date<=cutoff).map(e=>e.date))].sort();
+  const sums=Object.fromEntries(ownerNames.map(n=>[n,0]));
+  const layers=ownerNames.map(n=>({name:n,points:[{date:begin,low:0,high:0}]}));
+  for(const date of eventDates){
+   for(const e of dated.filter(e=>e.date===date)){
+    const ns=e.owner.split(',').map(z=>z.trim()).filter(Boolean);
+    for(const n of ns)sums[n]+=e.profit/ns.length;
+   }
+   let acc=0;
+   ownerNames.forEach((n,i)=>{const low=acc;acc+=sums[n];layers[i].points.push({date,low,high:acc});});
   }
   let acc=0;
-  ownerNames.forEach((n,i)=>{const low=acc;acc+=sums[n];layers[i].points.push({date,low,high:acc})});
- }
- let acc=0;ownerNames.forEach((n,i)=>{const low=acc;acc+=sums[n];layers[i].points.push({date:cutoff,low,high:acc})});
- const area=pts=>{
-  const upper=pts.map(p=>`${x(p.date).toFixed(1)},${y(p.high).toFixed(1)}`);
-  const lower=pts.slice().reverse().map(p=>`${x(p.date).toFixed(1)},${y(p.low).toFixed(1)}`);
-  return 'M '+upper.join(' L ')+' L '+lower.join(' L ')+' Z';
- };
- const areas=layers.map(layer=>`<path d="${area(layer.points)}" fill="${ownerColors[layer.name]}" fill-opacity=".72" stroke="none"><title>${esc(ownerLabel(layer.name))}</title></path>`).join('');
- let cumulative=0;const points=[{date:begin,v:0}];for(const date of eventDates){cumulative+=dated.filter(e=>e.date===date).reduce((a,e)=>a+e.profit,0);points.push({date,v:cumulative})}points.push({date:cutoff,v:cumulative});
- const zeroMarkers=ownerNames.filter(n=>!sold.some(e=>e.owner.split(',').map(z=>z.trim()).includes(n))).map(n=>`<circle cx="${x(cutoff)}" cy="${y(0)}" r="4" fill="${ownerColors[n]}" stroke="#fff1cb" stroke-width=".6"><title>${esc(ownerLabel(n))}: 0 €</title></circle>`).join('');
- const totalLine='<polyline points="'+points.map(p=>`${x(p.date)},${y(p.v)}`).join(' ')+'" fill="none" stroke="#fff2cf" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>';
- const grid=[0,100,200,300,400,500,585].map(v=>`<line x1="${L}" y1="${y(v)}" x2="${W-R}" y2="${y(v)}" stroke="#e8c58a28"/><text x="${L-9}" y="${y(v)+4}" fill="#cbbca7" text-anchor="end" font-size="12">${v} €</text>`).join('');
- const labels=['2026-11-06','2026-11-10','2026-11-14','2026-11-18','2026-11-22','2026-11-27'].map(d=>`<text x="${x(d)}" y="${H-27}" fill="#cbb89b" text-anchor="middle" font-size="12">${fmtDate(d)}</text>`).join('');
- const target=`<line x1="${x(begin)}" y1="${y(0)}" x2="${x(deadline)}" y2="${y(goal)}" stroke="#fff4c8" stroke-width="2" stroke-dasharray="8 7" opacity=".6"/><text x="${x(deadline)-7}" y="${y(goal)+7}" fill="#ffe7a1" text-anchor="middle" font-size="28">★</text>`;
- const marker=`<circle cx="${x(cutoff)}" cy="${y(cumulative)}" r="6" fill="#fff8d2" stroke="#9a692c" stroke-width="2"/>`;
- document.getElementById('timeline').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gestapelte kumulierte Verkaufserlöse nach Person bis zum aktuellen Datum">${grid}${target}${areas}${zeroMarkers}${totalLine}${marker}${labels}</svg>`;
- document.getElementById('chartnote').innerHTML='<div class="timeline-legend">'+ownerNames.map(n=>`<span><i style="background:${ownerColors[n]}"></i>${esc(ownerLabel(n))}</span>`).join('')+'<span><i style="background:#fff7d6"></i>Gesamt</span><span><i style="background:repeating-linear-gradient(90deg,#fff4c8 0 5px,transparent 5px 9px)"></i>Target</span></div>';
-}
-timeline();
+  ownerNames.forEach((n,i)=>{const low=acc;acc+=sums[n];layers[i].points.push({date:cutoff,low,high:acc});});
+  const area=pts=>'M '+pts.map(p=>`${x(p.date).toFixed(1)},${y(p.high).toFixed(1)}`).join(' L ')+' L '+pts.slice().reverse().map(p=>`${x(p.date).toFixed(1)},${y(p.low).toFixed(1)}`).join(' L ')+' Z';
+  const areas=layers.map(layer=>`<path d="${area(layer.points)}" fill="${colors[layer.name]}" fill-opacity=".72" stroke="none"><title>${esc(ownerLabel(layer.name))}</title></path>`).join('');
+  let cumulative=0;
+  const points=[{date:begin,v:0}];
+  for(const date of eventDates){cumulative+=dated.filter(e=>e.date===date).reduce((a,e)=>a+e.profit,0);points.push({date,v:cumulative});}
+  points.push({date:cutoff,v:cumulative});
+  const grid=Array.from({length:6},(_,i)=>Math.round(maxY*i/5)).map(v=>`<line x1="${L}" y1="${y(v)}" x2="${W-R}" y2="${y(v)}" stroke="#e8c58a28"/><text x="${L-10}" y="${y(v)+4}" fill="#cbbca7" text-anchor="end" font-size="12">${v.toLocaleString('de-DE')} €</text>`).join('');
+  const targets=stages.map((s,i)=>{
+    const prior=i?stages[i-1]:null;
+    const fromDate=prior?prior.date:begin,fromValue=prior?prior.goal:0;
+    const mark=`<line x1="${x(fromDate)}" y1="${y(fromValue)}" x2="${x(s.date)}" y2="${y(s.goal)}" stroke="#fff4c8" stroke-width="2" stroke-dasharray="8 7" opacity=".75"/>`;
+    const star=`<text x="${x(s.date)}" y="${y(s.goal)-9}" fill="#ffe7a1" text-anchor="middle" font-size="26">★</text>`;
+    const label=`<text x="${x(s.date)-4}" y="${Math.max(17,y(s.goal)-28)}" fill="#ffe7a1" text-anchor="end" font-size="12">${s.goal.toLocaleString('de-DE')} € · ${esc(s.label)}</text>`;
+    return mark+star+label;
+  }).join('');
+  const labels=Array.from({length:6},(_,i)=>new Date(ts(begin)+(ts(deadline)-ts(begin))*i/5).toISOString().slice(0,10)).map(d=>`<text x="${x(d)}" y="${H-29}" fill="#cbb89b" text-anchor="middle" font-size="11">${fmtDate(d)}</text>`).join('');
+  const zeroMarkers=ownerNames.filter(n=>!sold.some(e=>e.owner.split(',').map(z=>z.trim()).includes(n))).map(n=>`<circle cx="${x(cutoff)}" cy="${y(0)}" r="4" fill="${colors[n]}" stroke="#fff1cb" stroke-width=".6"><title>${esc(ownerLabel(n))}: 0 €</title></circle>`).join('');
+  const line=`<polyline points="${points.map(p=>`${x(p.date)},${y(p.v)}`).join(' ')}" fill="none" stroke="#fff2cf" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  const marker=`<circle cx="${x(cutoff)}" cy="${y(cumulative)}" r="6" fill="#fff8d2" stroke="#9a692c" stroke-width="2"/>`;
+  document.getElementById('timeline').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kumulierte Verkaufserlöse und aktuelle Etappenziele">${grid}${targets}${areas}${zeroMarkers}${line}${marker}${labels}</svg>`;
+  document.getElementById('chartnote').innerHTML='<div class="timeline-legend">'+ownerNames.map(n=>`<span><i style="background:${colors[n]}"></i>${esc(ownerLabel(n))}</span>`).join('')+'<span><i style="background:#fff7d6"></i>Gesamt</span><span><i style="background:repeating-linear-gradient(90deg,#fff4c8 0 5px,transparent 5px 9px)"></i>Target</span></div>';
+}timeline();
 function potentialChart(){
- const names=[...new Set(items.flatMap(e=>e.owner.split(',').map(z=>z.trim()).filter(Boolean)))];
+ const names=[...new Set(activeItems.flatMap(e=>e.owner.split(',').map(z=>z.trim()).filter(Boolean)))];
  const vals=Object.fromEntries(names.map(n=>[n,{sold:0,min:0,best:0}]));
  for(const e of items){
   const ns=e.owner.split(',').map(z=>z.trim()).filter(Boolean);if(!ns.length)continue;
