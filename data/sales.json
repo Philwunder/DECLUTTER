@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-21T11:03:08.571686+00:00",
+  "updatedAt": "2026-11-21T11:44:48.195025+00:00",
   "recordCount": 103,
-  "soldCount": 12,
-  "revenue": 1930.12,
-  "minimumTotal": 4815.12,
-  "bestCaseTotal": 8648.12,
+  "soldCount": 11,
+  "revenue": 480.12,
+  "minimumTotal": 4165.12,
+  "bestCaseTotal": 8748.12,
   "missingEstimateCount": 0,
   "items": [
     {
@@ -676,14 +676,14 @@
     {
       "id": "4126fd5d-7856-8027-88a0-e509596ebb44",
       "name": "Silbermünzensammlung",
-      "status": "Sold",
+      "status": "Given Away",
       "owners": [
         "Philipp"
       ],
       "profit": 1450,
       "minimum": 800,
       "bestCase": 1550,
-      "soldDate": "2026-11-19",
+      "soldDate": null,
       "link": "-"
     },
     {
@@ -1237,7 +1237,7 @@
       "name": "Stofftier - Löwe, Steiff",
       "status": "Online for Sale",
       "owners": [
-        "Family"
+        "Ulrike"
       ],
       "profit": null,
       "minimum": 50,
