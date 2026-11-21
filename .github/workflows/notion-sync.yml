@@ -67,10 +67,14 @@ jobs:
               date=direct or legacy_date(txt(p['Sales Update']))
               items.append({'id':row['id'],'name':txt(p['Item'],'title'),'status':status,'owners':owners,'profit':p['Sales Profit'].get('number'),'minimum':p['Minimum'].get('number'),'bestCase':p['Best Case'].get('number'),'soldDate':date if status=='Sold' else None,'link':p.get('Link',{}).get('url') if p.get('Link',{}).get('type')=='url' else None})
           # Excluded items remain visible in the inventory but contribute zero to finances.
+          active_unsold_statuses={'Online for Sale','Not Started'}
           excluded_statuses={'Given Away','Disposed'}
+          allowed_statuses=active_unsold_statuses | excluded_statuses | {'Sold'}
+          unknown=[(x['name'],x['status']) for x in items if x['status'] not in allowed_statuses]
+          if unknown: raise ValueError(f'Unknown Notion status values: {unknown}')
           excluded=[x for x in items if x['status'] in excluded_statuses]
           sold=[x for x in items if x['status']=='Sold']
-          unsold=[x for x in items if x['status'] not in excluded_statuses and x['status']!='Sold']
+          unsold=[x for x in items if x['status'] in active_unsold_statuses]
           if any(x['profit'] is None for x in sold): raise ValueError('Sold item missing Sales Profit')
           if any(not x['owners'] for x in sold+unsold): raise ValueError('Active item missing Owner')
           if any(x['minimum'] is not None and x['bestCase'] is not None and x['minimum']>x['bestCase'] for x in unsold): raise ValueError('Minimum exceeds Best Case')
@@ -82,6 +86,8 @@ jobs:
           os.makedirs('data',exist_ok=True)
           with open('data/sales.json','w',encoding='utf-8') as f: json.dump(payload,f,ensure_ascii=False,indent=2)
           print('Records:',len(items),'Sold:',len(sold),'Revenue:',round(revenue,2),'Excluded:',len(excluded),'Sold without date:',sum(x['soldDate'] is None for x in sold))
+          print('Minimum total:',round(minimum,2),'Best Case total:',round(best,2),'Active unsold:',len(unsold))
+          print('Excluded items:',[(x['name'],x['status']) for x in excluded])
           PY
       - name: Commit data to repository
         run: |
