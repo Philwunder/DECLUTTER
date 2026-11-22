@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-22T11:56:54.855859+00:00",
+  "updatedAt": "2026-11-22T12:50:31.855995+00:00",
   "recordCount": 103,
-  "soldCount": 11,
+  "soldCount": 12,
   "excludedCount": 2,
-  "revenue": 480.12,
-  "minimumTotal": 3290.12,
-  "bestCaseTotal": 7069.12,
+  "revenue": 540.12,
+  "minimumTotal": 3300.12,
+  "bestCaseTotal": 6979.12,
   "missingEstimateCount": 0,
   "items": [
     {
@@ -1340,14 +1340,14 @@
     {
       "id": "4126fd5d-7856-80ab-822e-dc07fb4278b0",
       "name": "Couch Set, Dunkelgrün",
-      "status": "Online for Sale",
+      "status": "Sold",
       "owners": [
         "Family"
       ],
-      "profit": null,
+      "profit": 60,
       "minimum": 50,
       "bestCase": 150,
-      "soldDate": null,
+      "soldDate": "2026-11-22",
       "link": "https://www.kleinanzeigen.de/s-anzeige/ledercouch-sofa-set-2er-3er-nur-selbstabholer/3575752880-88-1954"
     }
   ]
