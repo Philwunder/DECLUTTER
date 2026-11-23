@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-23T15:00:04.113956+00:00",
+  "updatedAt": "2026-11-23T16:02:31.048718+00:00",
   "recordCount": 103,
-  "soldCount": 12,
+  "soldCount": 13,
   "excludedCount": 2,
-  "revenue": 540.12,
-  "minimumTotal": 3300.12,
-  "bestCaseTotal": 6979.12,
+  "revenue": 550.12,
+  "minimumTotal": 3310.12,
+  "bestCaseTotal": 6969.12,
   "missingEstimateCount": 0,
   "items": [
     {
@@ -506,14 +506,14 @@
     {
       "id": "4126fd5d-7856-80d2-ae69-ceab4e3a9b26",
       "name": "Adventskalender, Filz, 2x",
-      "status": "Online for Sale",
+      "status": "Sold",
       "owners": [
         "Family"
       ],
-      "profit": null,
+      "profit": 10,
       "minimum": 0,
       "bestCase": 20,
-      "soldDate": null,
+      "soldDate": "2026-11-23",
       "link": "https://www.kleinanzeigen.de/s-anzeige/2-adventskalender-weihnachtswichtel-filz-24-taschen/3565709883-246-1954"
     },
     {
