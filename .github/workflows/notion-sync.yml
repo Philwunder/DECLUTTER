@@ -112,10 +112,3 @@ jobs:
               exit 1
             fi
           done
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - name: Deploy website
-        id: deployment
-        uses: actions/deploy-pages@v4
