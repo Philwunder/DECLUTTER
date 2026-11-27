@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-27T08:12:11.052041+00:00",
+  "updatedAt": "2026-11-27T09:28:52.797972+00:00",
   "recordCount": 103,
-  "soldCount": 13,
+  "soldCount": 14,
   "excludedCount": 2,
-  "revenue": 550.12,
-  "minimumTotal": 3310.12,
-  "bestCaseTotal": 6969.12,
+  "revenue": 559.93,
+  "minimumTotal": 3319.93,
+  "bestCaseTotal": 6963.93,
   "missingEstimateCount": 0,
   "items": [
     {
@@ -612,14 +612,14 @@
     {
       "id": "4126fd5d-7856-8008-bfa7-d89898ea3dc9",
       "name": "Aquadisc",
-      "status": "Online for Sale",
+      "status": "Sold",
       "owners": [
         "Philipp"
       ],
-      "profit": null,
+      "profit": 9.81,
       "minimum": 0,
       "bestCase": 15,
-      "soldDate": null,
+      "soldDate": "2026-11-27",
       "link": "https://www.kleinanzeigen.de/s-anzeige/aquato-aquadisc-wasser-frisbee-wurfscheibe/3565666552-230-1954"
     },
     {
