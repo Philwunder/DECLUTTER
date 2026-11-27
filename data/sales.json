@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-27T15:43:52.534352+00:00",
+  "updatedAt": "2026-11-27T16:50:15.958765+00:00",
   "recordCount": 103,
-  "soldCount": 14,
+  "soldCount": 15,
   "excludedCount": 2,
-  "revenue": 559.93,
-  "minimumTotal": 3319.93,
-  "bestCaseTotal": 6963.93,
+  "revenue": 594.93,
+  "minimumTotal": 3334.93,
+  "bestCaseTotal": 6953.93,
   "missingEstimateCount": 0,
   "items": [
     {
@@ -976,14 +976,14 @@
     {
       "id": "4126fd5d-7856-8012-8500-d4cd810a90c9",
       "name": "MIDI Controller",
-      "status": "Online for Sale",
+      "status": "Sold",
       "owners": [
         "Philipp"
       ],
-      "profit": null,
+      "profit": 35,
       "minimum": 20,
       "bestCase": 45,
-      "soldDate": null,
+      "soldDate": "2026-11-27",
       "link": "https://www.kleinanzeigen.de/s-anzeige/akai-mpk-mini-mk1-usb-midi-keyboard-controller-mit-25-tasten/3563636402-74-1954"
     },
     {
